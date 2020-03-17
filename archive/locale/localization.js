@@ -178,7 +178,7 @@ const LOC_STRINGS = {
             "<a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>" +
             "marton.balazs.kovacs@gmail.com</a>",
         'CZ': "Pokud máte nějaké dotazy, napište na email <a href='mailto:dechterenko@praha.psu.cas.cz?subject=Weissman experiment'>dechterenko@praha.psu.cas.cz</a> (Filip Děchtěrenko)",
-        'HUN': "Ha bármilyen kérdésed, aggályod vagy panaszod van a kísérlettel kapcsolatban, kérem keresd Kovács Márton kutatóasszisztenst <a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>marton.balazs.kovacs@gmail.com</a>",
+        'HUN': "Ha bármilyen kérdésed, aggályod vagy panaszod van a kísérlettel kapcsolatban, kérem keresd Bognár Miklós kutatóasszisztenst <a href='mailto:miklos.bognar92@gmail.com?subject=Weissman experiment'>miklos.bognar92@gmail.com</a>",
     },
     'g_c_email_ec': {
         'EN': "You may also contact Human Subjects Protection for questions about your rights as a research subject <a href='mailto:strategia@rk.elte.hu?subject=Weissman replication'>strategia@rk.elte.hu</a>",
@@ -358,7 +358,7 @@ const LOC_STRINGS = {
     'g_g_end_contact': {
         'EN': "If you have any questions or concerns about the experiment, you can contact the lead researcher <a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>marton.balazs.kovacs@gmail.com</a>",
         'CZ': "Pokud máte dotazy ohledně experimentu, kontaktujte výzkumníka Filipa Děchtěrenka <a href='mailto:dechterenko@praha.psu.cas.cz?subject=Weissman experiment'>dechterenko@praha.psu.cas.cz</a>",
-        'HUN': "Ha bármi kérdésed vagy megjegyzésed van, kérlek vedd fel a kapcsolatot a kutatás vezetőjével <a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>marton.balazs.kovacs@gmail.com</a>!"
+        'HUN': "Ha bármi kérdésed vagy megjegyzésed van, kérlek vedd fel a kapcsolatot a kutatás vezetőjével <a href='mailto:miklos.bognar92@gmail.com?subject=Weissman experiment'>miklos.bognar92@gmail.com</a>!"
     },
     'g_g_data_save_ok': {
         'EN': "The data have been saved successfully.",
