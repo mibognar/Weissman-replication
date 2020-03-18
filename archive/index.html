@@ -74,6 +74,10 @@
                 <p>If you continue to see this message after a couple of seconds something has gone wrong. In order to run properly the experiment requires a modern browser with javascript enabled.</p>
             </div>
         </div>
+        <div id="Firefox-notification" class="instructions">
+            <h1>S::g_c_firefox_notification_title</h1>
+            <p>S::g_c_firefox_notification_text</p>
+        </div>
         <div id="Consent" class="instructions hidden">
             <h1>S::g_c_title</h1>
             <p>S::g_c_summary</p>
@@ -86,6 +90,7 @@
                 <input type="checkbox" onchange="checkConsent()"/>
                 <p>S::g_c_agree</p>
             </div>
+
 
             <h1>S::g_c_title2</h1>
             <p>S::g_c_p1</p>
@@ -328,8 +333,11 @@
             showDiv('Error');
             return;
         }
-
-        showDiv('Consent');
+        if(navigator.userAgent.search("Firefox") > -1 ){
+          showDiv('Firefox-notification');
+        }else{
+          showDiv('Consent');
+        }
     });
 
     /* Hereafter everything is chained through the user interface.

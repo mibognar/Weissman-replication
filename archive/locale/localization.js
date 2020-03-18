@@ -128,6 +128,16 @@ const LOC_KEYS = {
  * @type {{}}
  */
 const LOC_STRINGS = {
+    'g_c_firefox_notification_title':{
+        'EN': "Firefox not allowed",
+        'CZ': "Firefox není povolen",
+        'HUN': "Firefox nem engedélyezett"
+    },
+    'g_c_firefox_notification_text': {
+        'EN': "This experiment can't be run on firefox browsers. Please choose an other browser to run this experiment! (Chrome, Edge, Opera, Safari)",
+        'CZ': "Tento experiment nelze spustit v prohlížeči Firefox. Chcete-li spustit tento experiment, vyberte jiný prohlížeč! (Chrome, Edge, Opera, Safari)",
+        'HUN': "Ez a kísérlet nem futtatható firefox böngészővel. Kérlek válassz egy másik böngészőt a kísérlet futtatásához! (Chrome, Edge, Opera, Safari)"
+    },
     'g_c_title': {
         'EN': "Inform form:",
         'CZ': "Prohlášení:",
@@ -140,7 +150,7 @@ const LOC_STRINGS = {
     },
     'g_c_data': {
         'EN': "<strong>data handling</strong>: text",
-        'CZ': "<strong>Nakládání s daty:</strong>: Během experimentů budeme z evidenčních důvodů sbírat některé vaše osobní údaje (věk, pohlaví) a údaje o vašem výkonu. Vaše osobní údaje nebudou sdělovány nikomu mimo výzkumný tým. Údaje o vašem výkonu v experimentech budou využity pouze pro vyhodnocení experimentů a nebudou samostatně sdělovány dalším osobám. Výsledky budou prezentovány nebo publikovány způsobem, který neumožňuje identifikaci výsledků jednotlivých osob.", 		
+        'CZ': "<strong>Nakládání s daty:</strong>: Během experimentů budeme z evidenčních důvodů sbírat některé vaše osobní údaje (věk, pohlaví) a údaje o vašem výkonu. Vaše osobní údaje nebudou sdělovány nikomu mimo výzkumný tým. Údaje o vašem výkonu v experimentech budou využity pouze pro vyhodnocení experimentů a nebudou samostatně sdělovány dalším osobám. Výsledky budou prezentovány nebo publikovány způsobem, který neumožňuje identifikaci výsledků jednotlivých osob.",
         'HUN': "<strong>Adatkezelés</strong>: Szigorúan bizalmasan kezelünk minden olyan személyes információt, amit a kutatás keretén belül gyűjtünk össze. A kutatás során nyert adatokat kóddal ellátva biztonságos számítógépeken tároljuk. A kutatás során nyert adatokat összegezzük. Az ELTE PPK Affektív Pszichológia Tanszék Döntéspszichológiai Kutatócsoportja, mint adatkezelő, fenti személyes adataimat bizalmasan kezeli, más adatkezelőnek, adatfeldolgozónak nem adja át. E tényállás részleteit a „Hozzájárulás adatkezeléshez” c. dokumentum tartalmazza: http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/ Az adatkezelésről szóló szabályozásról részletesebben pedig itt tájékozódhat: https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf A kutatás egy későbbi szakaszában még egy kísérletet fogunk kiküldeni Önnek. A kutatás során nyert személyes adatait arra használjuk fel, hogy a két kísérletben adott válaszait össze tudjuk kötni. Az azonosítására alkalmas adatokat (NEPTUN kód) ezután törölni fogjuk, így válaszai már nem lesznek semmilyen módon Önhöz köthetők. Az anononimizált adatait ezután más kutatókkal megosztjuk."
     },
     'g_c_participation': {
