@@ -323,7 +323,7 @@ const LOC_STRINGS = {
     'g_i_accuracy70': {
         'EN': "It is very important to stay focused during the experiment. Please do not do anything else while doing this task. Please note that we only accept jobs with >70% accuracy, which is a reasonable threshold based on our previous studies.",
         'CZ': "Zároveň je však důležité, abyste si zachovali plnou pozornost po celou dobu experimentu, a prosíme, abyste se v průběhu pokusu vyvarovali jakékoli jiné činnosti. Krom toho prosím pamatujte také na to, že využity budou pouze ty výsledky, u nichž hranice úspěšnosti dosáhne alespoň 70 % – tento limit byl stanoven po pečlivém uvážení na základě předešlých studií.",
-        'HUN': "Nagyon fontos, hogy a kísérlet során végig tudj összpontosítani! Kérünk, hogy ne csinálj semmi mást, miközben a feladatot csinálod! Kérünk, vedd figyelembe, hogy ha a megoldásod pontossága 70%-nál alacsonyabb lesz, ami egy ésszerű határ az előző kutatások fényében, akkor csak 0,5 pontot kapsz a kitöltésért. Ha 70% feletti pontossággal oldod meg a feladatot, akkor 1 pontot kapsz a „Pszichológiai kísérletben és tudományos aktivitásban való részvétel” nevű kurzuson."
+        'HUN': "Nagyon fontos, hogy a kísérlet során végig tudj összpontosítani! Kérünk, hogy ne csinálj semmi mást, miközben a feladatot csinálod! Kérünk, vedd figyelembe, hogy ha a megoldásod pontossága 70%-nál alacsonyabb lesz, ami egy ésszerű határ az előző kutatások fényében, akkor nem kapsz pontot a kitöltésért. Ha 70% feletti pontossággal oldod meg a feladatot, akkor 0,5 pontot kapsz a „Pszichológiai kísérletben és tudományos aktivitásban való részvétel” nevű kurzuson."
     },
     'g_g_continue': {
         'EN': "Continue...",
