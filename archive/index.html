@@ -61,7 +61,7 @@
         X.uid = search.uid;
         X.loc = search.loc.toUpperCase();
         X.type = search.name.toLowerCase();
-        X.version = search.version;
+        X.version = typeof search.version==='undefined'? 'core' : search.version;
         X.debug = typeof search.debug === 'undefined'? false : search.debug == true;
 
     </script>
