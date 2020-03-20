@@ -231,6 +231,7 @@ function exportData() {
     let meta = {
         loc: X.loc,
         task: X.type,
+        version: X.version,
         consentTime: X.consented,
         eventLog: X.eventLog.join("| "),
         debriefGeneralComments: X.debrief.CommentsGeneral
