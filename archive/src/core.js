@@ -136,7 +136,7 @@ function saveResponse(e) {
     clearTimeout(X.responseTimeout);
 
     X.trials[X.trialNum].responseTime = now();
-    X.trials[X.trialNum].responseContent = timeOut? "TIMEOUT" : e.key;
+    X.trials[X.trialNum].responseContent = timeOut? "TIMEOUT" : e.key.toLowerCase();
 
     // Call task's response handler function to get the inter-trial interval
     let ITI = X.cfg.onResponse(e, document.querySelector('#Stimulus'));
