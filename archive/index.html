@@ -64,6 +64,21 @@
         X.version = typeof search.version==='undefined'? 'core' : search.version;
         X.debug = typeof search.debug === 'undefined'? false : search.debug == true;
 
+        let neg_images = new Array();
+        let neu_images = new Array();
+        if (X.type === "affective_primeprobe"){
+          for (i = 1; i<=18; i++) {
+            neg_images[i] = new Image();
+            neg_images[i].id = "randimage";
+            neg_images[i].src = "affective_images/neg" + i + ".png";
+          }
+          for (i = 1; i<=18; i++) {
+            neu_images[i] = new Image();
+            neu_images[i].id = "randimage";
+            neu_images[i].src = "affective_images/neu" + i + ".jpg";
+          }
+        }
+
     </script>
 </head>
 <body tabindex="0">
@@ -146,6 +161,45 @@
             <button onclick="recordDemographics()">S::g_g_continue</button>
         </div>
         <div id="Instructions" class="instructions hidden">
+          <div id="InstructionsAFFECTIVE_PRIMEPROBE">
+              <h1>S::g_i_title</h1>
+              <p>S::p_i_overview</p>
+              <div class="row">
+                  <div>I::p_ex1</div>
+                  <div>I::p_ex2</div>
+              </div>
+              <p>S::p_i_detail</p>
+              <p>S::p_i_responses</p>
+              <div class="response-table">
+                  <div class="labels">
+                      <div>S::g_g_response</div>
+                      <div>S::g_g_stimulus</div>
+                      <div>S::g_g_finger</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::f</kbd></div>
+                      <div>S::g_s_left</div>
+                      <div>S::g_f_left_middle</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::g</kbd></div>
+                      <div>S::g_s_right</div>
+                      <div>S::g_f_left_index</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::n</kbd></div>
+                      <div>S::g_s_down</div>
+                      <div>S::g_f_right_index</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::j</kbd></div>
+                      <div>S::g_s_up</div>
+                      <div>S::g_f_right_middle</div>
+                  </div>
+              </div>
+              <p>S::p_i_practice</p>
+              <p>S::g_i_accuracy70</p>
+          </div>
             <div id="InstructionsPRIMEPROBE">
                 <h1>S::g_i_title</h1>
                 <p>S::p_i_overview</p>
