@@ -99,7 +99,7 @@
             <h1>S::g_c_title</h1>
             <p>S::g_c_summary</p>
             <p>S::g_c_data</p>
-            <p>S::g_c_participation</p>
+            <p>S::g_c_aff_participation</p>
             <p>S::g_c_contact</p>
             <p>S::g_c_email_pi</p>
             <p>S::g_c_email_ec</p>
@@ -168,7 +168,7 @@
                   <div>I::p_ex1</div>
                   <div>I::p_ex2</div>
               </div>
-              <p>S::p_i_detail</p>
+              <p>S::p_i_aff_detail</p>
               <p>S::p_i_responses</p>
               <div class="response-table">
                   <div class="labels">
@@ -207,7 +207,7 @@
                     <div>I::p_ex1</div>
                     <div>I::p_ex2</div>
                 </div>
-                <p>S::p_i_detail</p>
+                <p>S::p_i_aff_detail</p>
                 <p>S::p_i_responses</p>
                 <div class="response-table">
                     <div class="labels">
@@ -316,6 +316,11 @@
         </div>
         <div id="EndPractice" class="instructions hidden">
             <h1>S::g_p_end</h1>
+            <div class="practice-response-map"></div>
+            <button onclick="runTrial()">S::g_g_continue</button>
+        </div>
+        <div id="AffectiveEndPractice" class="instructions hidden">
+            <h1>S::g_p_aff_end</h1>
             <div class="practice-response-map"></div>
             <button onclick="runTrial()">S::g_g_continue</button>
         </div>

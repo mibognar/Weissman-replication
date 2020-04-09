@@ -303,15 +303,12 @@ const CFG = {
             stimDiv.classList.add('primeprobe', 'prime');
             X.trials[X.trialNum].primeOnset = now();
             if (X.trialNum % 3 == 0 && !X.trials[X.trialNum].isPractice){
-              X.trials[X.trialNum]["is_image"] = true;
+              X.trials[X.trialNum]["is_image"] = 1;
               CFG.affective_primeprobe.showImage(stimDiv);
             }else{
               CFG.affective_primeprobe.showPrime(stimDiv);
             }
-             //'<img src="neg4.png" />';////innerHTML =  s + "<br/>" + s + "<br/>" + s;
 
-
-            //setTimeout(CFG.affective_primeprobe.hidePrime, CFG.affective_primeprobe.primeDuration, stimDiv);
         },
         showImage: function(stimDiv){
           var rand = Math.floor(Math.random() * (18 - 1 + 1) ) + 1;

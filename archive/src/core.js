@@ -168,7 +168,11 @@ function endBlock() {
 }
 
 function endPractice() {
-    showDiv('EndPractice');
+    if (X.type === "affective_primeprobe"){
+      showDiv('AffectiveEndPractice')
+    }else{
+      showDiv('EndPractice');
+    }
     document.querySelector('#Hint').classList.add('hidden');
 }
 
