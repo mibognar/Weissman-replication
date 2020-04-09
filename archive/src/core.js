@@ -296,8 +296,11 @@ function pCorrect() {
     X.trials.forEach((t)=>{
         if(t.isPractice === 1)
             return;
-        trials++;
+        if (t.is_image != 1){
+          trials++;
+        }
         correct += t.responseContent === t.responseTarget? 1 : 0;
+
     });
     return correct / trials;
 }

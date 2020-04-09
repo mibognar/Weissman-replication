@@ -242,7 +242,7 @@ const CFG = {
       trialDuration: 2000,
       stimuli: [],
       responseKeys: [],
-      imageDuration: 1500,
+      imageDuration: 1967,
       primeDuration: 133,
       primeProbeGap: 33,
       probeDuration: 133,
@@ -285,7 +285,8 @@ const CFG = {
                       probe: S(probe),
                       responseTarget: K(X.responseMap[probe]),
                       isCongruent,
-                      is_image: false,
+                      image_id: null,
+                      is_image: 0,
                       primeOnset: null,
                       primeOffset: null,
                       probeOnset: null,
@@ -301,7 +302,7 @@ const CFG = {
       showStimulus: function(stimDiv){
             stimDiv.classList.add('primeprobe', 'prime');
             X.trials[X.trialNum].primeOnset = now();
-            if (X.trialNum % 2 == 0 && !X.trials[X.trialNum].isPractice){
+            if (X.trialNum % 3 == 0 && !X.trials[X.trialNum].isPractice){
               X.trials[X.trialNum]["is_image"] = true;
               CFG.affective_primeprobe.showImage(stimDiv);
             }else{
@@ -316,8 +317,10 @@ const CFG = {
           var rand = Math.floor(Math.random() * (18 - 1 + 1) ) + 1;
           if (X.trials[X.trialNum]["isCongruent"]===1){
             var theimage = neu_images[rand];
+            X.trials[X.trialNum]["image_id"] = "neu" + rand
           }else{
             var theimage = neg_images[rand];
+            X.trials[X.trialNum]["image_id"] = "neg" + rand
           }
           stimDiv.appendChild(theimage);
           X.responseOpen = true;
@@ -329,7 +332,7 @@ const CFG = {
         hideImage: function(stimDiv){
           stimDiv.classList.remove('image');
           let theimage = document.getElementById("randimage");
-          stimDiv.removeChild(theimage);
+          //stimDiv.removeChild(theimage);
           if(X.trialNum < X.trials.length)
               X.trials[X.trialNum].probeOffset = now();
         },
