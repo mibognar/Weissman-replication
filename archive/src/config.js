@@ -133,11 +133,11 @@ const sharedCFG = {
 
             if(useWeights && availableOptions.length === 2) {
                 // Selection weighted by counts of remaining trials
-                const rng = getRandomInt(0, Ns[availableOptions[0]] + Ns[availableOptions[1]] - 1);
+                const rng = getRandomInt(0, Ns[availableOptions[0]] + Ns[availableOptions[1]]);
 
                 choice = rng < Ns[options[0]]? availableOptions[0] : availableOptions[1];
             } else
-                choice = availableOptions[getRandomInt(0, availableOptions.length - 1)];
+                choice = availableOptions[getRandomInt(0, availableOptions.length)];
 
             // Save the trial and append the stimulus choice
             trials.push(choice + stims[(4 & choice) >> 2][(2 & choice) >> 1].pop());
@@ -369,6 +369,173 @@ const CFG = {
             // Let the default function handle feedback
             if (X.trials[X.trialNum]['is_image']){
               sharedCFG.onResponse(kbEvent, stimDiv, is_image=true);
+            }else{
+              sharedCFG.onResponse(kbEvent, stimDiv);
+            }
+            // primeprobe trials are always 2s long, or 2s+1500 ITI in practice
+            // (except in debug mode)
+            if(X.debug)
+                return 0;
+            let ms = X.cfg.trialDuration;
+            if(X.trials[X.trialNum].isPractice)
+                ms += X.cfg.trainingInterTrialInterval;
+            return ms - (now() - X.trials[X.trialNum].primeOnset);
+        }
+    },
+    affective_words_primeprobe: {
+      blocks: sharedCFG.blocks,
+      trialsPerBlock: 96,
+      trainingTrials: sharedCFG.trainingTrials,
+      trainingInterTrialInterval: sharedCFG.trainingInterTrialInterval,
+      maxRT: 1833, // 2s - 133ms - 33ms
+      trialDuration: 2000,
+      stimuli: [],
+      responseKeys: [],
+      imageDuration: 1967,
+      blankDuration: 1967,
+      primeDuration: 133,
+      primeProbeGap: 33,
+      probeDuration: 133,
+      getResponseMap: function() {
+          if(CFG.primeprobe.stimuli.length === 0)
+              CFG.primeprobe.stimuli = ['g_s_left', 'g_s_right', 'g_s_up', 'g_s_down'];
+          if(CFG.primeprobe.responseKeys.length === 0)
+              CFG.primeprobe.responseKeys = ['f', 'g', 'j', 'n'];
+
+          // primeprobe splits stimuli into left/right and up/down pairs
+          // The stimulus-response bindings are constant
+          let out = {};
+          for(let i = 0; i < CFG.primeprobe.stimuli.length; i++)
+              out[CFG.primeprobe.stimuli[i]] = CFG.primeprobe.responseKeys[i];
+          return out;
+      },
+      getTrials: function() {
+          let set = [
+              [CFG.primeprobe.stimuli[0], CFG.primeprobe.stimuli[1]],
+              [CFG.primeprobe.stimuli[2], CFG.primeprobe.stimuli[3]]
+          ];
+          let trials = [];
+          // Trial types is a list of flags from 0-15:
+          // flag = (8*prevCongruency)+(4*curCongruency)+(2*featureSet)+(stimulus)
+          for(let b = 0; b < CFG.primeprobe.blocks; b++) {
+              let isPractice = b === 0? 1 : 0;
+              let trialTypes = sharedCFG.getCongruencySequence(
+                  isPractice? CFG.primeprobe.trainingTrials : CFG.primeprobe.trialsPerBlock, b > 0
+              );
+              trialTypes.forEach((t) => {
+                  let isCongruent = (t & 4) === 4? 1 : 0;
+                  let probe = set[(t & 2) === 2 ? 1 : 0][t & 1];
+                  let prime = isCongruent ? probe : set[(t & 2) === 2 ? 1 : 0][1 - (t & 1)];
+                  let trial = {
+                      trialId: trials.length,
+                      typeCode: t,
+                      block: b,
+                      isPractice,
+                      prime: S(prime),
+                      probe: S(probe),
+                      responseTarget: K(X.responseMap[probe]),
+                      isCongruent,
+                      word_id: null,
+                      word_content: null,
+                      is_affective_word: 0,
+                      is_primeprobe: 0,
+                      is_blank: 0,
+                      primeOnset: null,
+                      primeOffset: null,
+                      probeOnset: null,
+                      probeOffset: null,
+                      responseTime: null,
+                      responseContent: null
+                  };
+                  trials.push(trial);
+              });
+          }
+          return trials;
+      },
+      showStimulus: function(stimDiv){
+            stimDiv.classList.add('primeprobe', 'prime');
+            X.trials[X.trialNum].primeOnset = now();
+            let previous_trialNum = X.trialNum-1
+            if (X.trialNum > 0 && X.trials[previous_trialNum]["is_primeprobe"] && !X.trials[X.trialNum].isPractice){
+              X.trials[X.trialNum]["is_blank"] = 1;
+              CFG.affective_words_primeprobe.showBlank(stimDiv);
+            }
+            else if (X.trialNum % 3 == 0 && !X.trials[X.trialNum].isPractice){
+              X.trials[X.trialNum]["is_affective_word"] = 1;
+              CFG.affective_words_primeprobe.showWord(stimDiv);
+            }else{
+              CFG.affective_words_primeprobe.showPrime(stimDiv);
+              X.trials[X.trialNum]["is_primeprobe"] = 1;
+            }
+        },
+        showBlank: function(stimDiv) {
+          stimDiv.innerHTML = "";
+          X.responseOpen = true;
+          // Responding is open for as long as necessary, except in debug mode
+          X.responseTimeout = setTimeout(saveResponse, X.cfg.maxRT);
+          setTimeout(CFG.affective_words_primeprobe.hideWord,CFG.affective_words_primeprobe.blankDuration, stimDiv);
+        },
+        showWord: function(stimDiv){
+          var rand = Math.floor(Math.random() *  64);
+          if (X.trials[X.trialNum]["isCongruent"]===1){
+            var theword = neu_words[rand];
+            X.trials[X.trialNum]["word_id"] = "neu" + rand
+            X.trials[X.trialNum]["word_content"] = theword
+          }else{
+            var theword = neg_words[rand];
+            X.trials[X.trialNum]["word_id"] = "neg" + rand
+            X.trials[X.trialNum]["word_content"] = theword
+          }
+          // stimDiv.appendChild(theimage);
+          stimDiv.innerHTML = theword;
+          X.responseOpen = true;
+          // Responding is open for as long as necessary, except in debug mode
+          X.responseTimeout = setTimeout(saveResponse, X.cfg.maxRT);
+          setTimeout(CFG.affective_words_primeprobe.hideWord,CFG.affective_words_primeprobe.imageDuration, stimDiv);
+
+        },
+        hideWord: function(stimDiv){
+          stimDiv.innerText = "";
+          //stimDiv.removeChild(theimage);
+          if(X.trialNum < X.trials.length)
+              X.trials[X.trialNum].probeOffset = now();
+        },
+
+        showPrime: function(stimDiv){
+            let s = X.trials[X.trialNum].prime;
+            stimDiv.innerHTML =  s + "<br/>" + s + "<br/>" + s;
+            setTimeout(CFG.affective_primeprobe.hidePrime, CFG.primeprobe.primeDuration, stimDiv);
+        },
+
+        hidePrime: function(stimDiv) {
+            stimDiv.innerText = "";
+            stimDiv.classList.remove('prime');
+            if(X.trialNum < X.trials.length)
+                X.trials[X.trialNum].primeOffset = now();
+            setTimeout(CFG.affective_primeprobe.showProbe, CFG.affective_primeprobe.primeProbeGap, stimDiv);
+        },
+        showProbe: function(stimDiv) {
+            stimDiv.classList.add('probe');
+            stimDiv.innerText = X.trials[X.trialNum].probe;
+            X.trials[X.trialNum].probeOnset = now();
+
+            // Enable responding
+            X.responseOpen = true;
+            // Responding is open for as long as necessary, except in debug mode
+            X.responseTimeout = setTimeout(saveResponse, X.cfg.maxRT);
+
+            setTimeout(CFG.affective_primeprobe.hideProbe, CFG.affective_primeprobe.probeDuration, stimDiv);
+        },
+        hideProbe: function(stimDiv) {
+            stimDiv.innerText = "";
+            stimDiv.classList.remove('probe');
+            if(X.trialNum < X.trials.length)
+                X.trials[X.trialNum].probeOffset = now();
+        },
+        onResponse: function(kbEvent, stimDiv) {
+            // Let the default function handle feedback
+            if (X.trials[X.trialNum]['is_word']){
+              sharedCFG.onResponse(kbEvent, stimDiv, is_image=1);
             }else{
               sharedCFG.onResponse(kbEvent, stimDiv);
             }

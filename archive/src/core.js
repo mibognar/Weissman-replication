@@ -300,7 +300,7 @@ function pCorrect() {
     X.trials.forEach((t)=>{
         if(t.isPractice === 1)
             return;
-        if (t.is_image != 1){
+        if (t.is_image != 1 || t.is_word != 1){
           trials++;
         }
         correct += t.responseContent === t.responseTarget? 1 : 0;
