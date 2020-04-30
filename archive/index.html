@@ -74,13 +74,19 @@
           'tömeggyilkos', 'bűnös', 'zaklat', 'gyűlölet', 'herpesz', 'megaláz', 'sérülés', 'viszketés',
           'gyilkosság', 'gyász', 'eltaszít', 'bűz', 'kínoz', 'szánalmas', 'veszély', 'perverz', 'veszteség',
           'büntetés', 'örjöngés', 'elutasítás', 'rothadás', 'romhalmaz', 'átverés', 'szégyen', 'zokog', 'gyanús',
-          'hulladék', 'csapda');
+          'hulladék', 'csapda', 'terror', 'robbanás', 'sikoly', 'kibelez', 'rettenet', 'betegség', 'genny', 'ostoba', 'erkölcstelen',
+          'fájdalom', 'szívroham', 'hányás', ',koldus', 'hiba', 'mérgezés', 'járvány', 'vírus', 'penész', 'depresszió', 'szorongás',
+          'horzsolás', 'árulás', 'ordít', 'kisemmiz', 'gyulladás', 'hazugság', 'merénylet', 'pokol', 'szörnyethal', 'katasztrófa','zúzódás',
+        'viszér', 'migrén');
         let neu_words = new Array('ajtó', 'ablak', 'csésze', 'papír', 'bokor', 'fém', 'kék', 'kerék', 'füzet',
           'liszt', 'üveg', 'tégla', 'betű', 'kő', 'ceruza', 'szék', 'szem', 'drót', 'telefon', 'szőnyeg', 'cipőfűző',
           'bőr', 'pohár', 'tányér', 'gép', 'út', 'tábla', 'jármű', 'szín', 'hang', 'kilincs', 'homok', 'föld', 'szerszám',
           'kosár', 'polc', 'csempe', 'járda', 'pad', 'anyag', 'festék', 'pont', 'sáv', 'oszlop', 'szóköz', 'szám', 'négy',
           'három', 'kettő', 'egy', 'kilenc', 'tizenegy', 'tizenöt', 'csavar', 'lap', 'lámpa', 'sárga', 'zsák', 'vas', 'víz',
-          'villa', 'kanál', 'cérna', 'fogas');
+          'villa', 'kanál', 'cérna', 'fogas', 'tálca', 'lista', 'szivacs', 'takaró', 'doboz', 'egyenes', 'só', 'szalvéta', 'törölköző', 'nagy', 'kicsi',
+          'folyosó', 'szoba', 'fal', 'csipesz', 'kar', 'kéz', 'láb', 'fájl', 'csomag', 'gép', 'néz', 'óra', 'pedál', 'fogó',
+          'idő', 'toll', 'vezeték', 'tulaj', 'csoport', 'eszköz', 'tárgy', 'vízszintes', 'függőleges', 'négyzet', 'rombusz', 'téglalap',
+          'kör', 'adat', 'hő', 'mér', 'jár', 'trapéz', 'vonal', 'húz', 'kapcsoló', 'szekrény', 'irány');
         if (X.type === "affective_primeprobe"){
           for (i = 1; i<=18; i++) {
             neg_images[i] = new Image();
@@ -115,7 +121,7 @@
             <h1>S::g_c_title</h1>
             <p>S::g_c_summary</p>
             <p>S::g_c_data</p>
-            <p>S::g_c_aff_participation</p>
+            <p>S::g_c_aff_words_participation</p>
             <p>S::g_c_contact</p>
             <p>S::g_c_email_pi</p>
             <p>S::g_c_email_ec</p>
@@ -223,7 +229,7 @@
                   <div>I::p_ex1</div>
                   <div>I::p_ex2</div>
               </div>
-              <p>S::p_i_aff_detail</p>
+              <p>S::p_i_aff_words_detail</p>
               <p>S::p_i_responses</p>
               <div class="response-table">
                   <div class="labels">
@@ -376,6 +382,11 @@
         </div>
         <div id="AffectiveEndPractice" class="instructions hidden">
             <h1>S::g_p_aff_end</h1>
+            <div class="practice-response-map"></div>
+            <button onclick="runTrial()">S::g_g_continue</button>
+        </div>
+        <div id="AffectiveWordsEndPractice" class="instructions hidden">
+            <h1>S::g_p_aff_words_end</h1>
             <div class="practice-response-map"></div>
             <button onclick="runTrial()">S::g_g_continue</button>
         </div>

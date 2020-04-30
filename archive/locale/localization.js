@@ -163,6 +163,11 @@ const LOC_STRINGS = {
         'CZ': "Účast ve studii je zcela dobrovolná and můžete se z ní kdykoli odhlásit uzavřením okna internetového prohlížeče. Po sesbírání všech dat vylosujeme 25 lidí a každý vylosovaný obdrží 200,-Kč. Pokud nedokončíte úlohu, nebo pokud ji dokončíte pod spodní hranicí výkonu, nemůžeme Vás zařadit do slosování o odměnu.",
         'HUN': "<strong>Részvétel</strong>: A kutatásban való részvétel teljesen önkéntes. A vizsgálatot bármikor indoklás nélkül megszakíthatod, vagy a kérdések megválaszolását megtagadhatod a böngésző ablak bezárásával. FIGYELEM: A kísérlet a nyugalom megzavarására alkalmas képeket is tartalmaz."
     },
+    'g_c_aff_words_participation': {
+        'EN': "<strong>participation</strong>: text",
+        'CZ': "Účast ve studii je zcela dobrovolná and můžete se z ní kdykoli odhlásit uzavřením okna internetového prohlížeče. Po sesbírání všech dat vylosujeme 25 lidí a každý vylosovaný obdrží 200,-Kč. Pokud nedokončíte úlohu, nebo pokud ji dokončíte pod spodní hranicí výkonu, nemůžeme Vás zařadit do slosování o odměnu.",
+        'HUN': "<strong>Részvétel</strong>: A kutatásban való részvétel teljesen önkéntes. A vizsgálatot bármikor indoklás nélkül megszakíthatod, vagy a kérdések megválaszolását megtagadhatod a böngésző ablak bezárásával. FIGYELEM: A kísérlet a nyugalom megzavarására alkalmas szavakat is tartalmaz."
+    },
     'g_c_title2': {
         'EN': "Consent form",
         'CZ': "Informovaný souhlas",
@@ -455,6 +460,11 @@ const LOC_STRINGS = {
         'CZ': "Konec zácviku",
         'HUN': "Véget ért a gyakorló rész. A következő blokkokban esetenként képek is megjelennek a képernyőn, ezeknél nem kell megnyomnod semmit, csak figyeld meg őket alaposan!"
     },
+    'g_p_aff_words_end': {
+        'EN': "End of practice",
+        'CZ': "Konec zácviku",
+        'HUN': "Véget ért a gyakorló rész. A következő blokkokban esetenként kék betűszínű szavak is megjelennek a képernyőn, ezeknél nem kell megnyomnod semmit, csak figyelmesen olvasd el őket!"
+    },
     'g_r_too_slow': {
         'EN': "too slow",
         'CZ': "příliš pomalé",
@@ -579,6 +589,11 @@ const LOC_STRINGS = {
         'EN': "Your task is to indicate the identity of this single word (not the 3 words that appear earlier). You will use the <kbd>f</kbd>, <kbd>g</kbd>, <kbd>j</kbd>, and <kbd>n</kbd> keys to respond. The responses are shown below, along with which fingers to use for which keys. In the example above, the single word was 'LEFT', so you would press the <kbd>f</kbd> key. In all trials, please respond as quickly as possible without making mistakes.",
         'CZ': "Vaším úkolem je označit identitu tohoto jediného slovo (ne 3 slov, která se objevila dříve). Pokud tímto slovem bude \"levá\", zmáčkněte prostředníkem levé ruky klávesu <kbd>f</kbd>. Pokud tímto slovem bude 'pravá', zmáčkněte levým ukazovákem klávesu <kbd>g</kbd>. Pokud tímto slovem bude 'nahoru', zmáčkněte pravým prostředníčkem klávesu <kbd>j</kbd>. Pokud tímto slovem bude 'dolů', zmáčkněte pravým ukazovákem klávesu  <kbd>n</kbd>. Ve všech pokusech prosím odpovídejte co nejrychleji, aniž byste udělali chyby.",
         'HUN': "A  feladatod az lesz, hogy beazonosítsd az egyedül álló szót (ne a három szót, ami előtte jelenik meg). Ha az egyedül álló szó Bal, akkor nyomd meg az <kbd>f</kbd> billentyűt a bal középső ujjaddal! Ha az egyedül álló szó Jobb, akkor nyomd meg a <kbd>g</kbd> billentyűt a bal mutatóujjaddal! Ha az egyedül álló szó Fel, akkor nyomd meg a <kbd>j</kbd> billentyűt a jobb középső ujjaddal! Ha az egyedül álló szó Le, nyomd meg az <kbd>n</kbd> billentyűt a jobb mutatóujjaddal! Minden próbában próbálj meg olyan gyorsan válaszolni, amennyire lehetséges hibázás nélkül! A kísérleti blokkokban a felvillanó szavakon kívül képeket is fogsz látni. Ezeknél semmilyen gombot nem kell megnyomnod, csak figyeld meg a képeket a lehető legjobban. Figyelem, némelyik kép bizonyos személyekben erős érzelmeket kelthet."
+    },
+    'p_i_aff_words_detail': {
+        'EN': "Your task is to indicate the identity of this single word (not the 3 words that appear earlier). You will use the <kbd>f</kbd>, <kbd>g</kbd>, <kbd>j</kbd>, and <kbd>n</kbd> keys to respond. The responses are shown below, along with which fingers to use for which keys. In the example above, the single word was 'LEFT', so you would press the <kbd>f</kbd> key. In all trials, please respond as quickly as possible without making mistakes.",
+        'CZ': "Vaším úkolem je označit identitu tohoto jediného slovo (ne 3 slov, která se objevila dříve). Pokud tímto slovem bude \"levá\", zmáčkněte prostředníkem levé ruky klávesu <kbd>f</kbd>. Pokud tímto slovem bude 'pravá', zmáčkněte levým ukazovákem klávesu <kbd>g</kbd>. Pokud tímto slovem bude 'nahoru', zmáčkněte pravým prostředníčkem klávesu <kbd>j</kbd>. Pokud tímto slovem bude 'dolů', zmáčkněte pravým ukazovákem klávesu  <kbd>n</kbd>. Ve všech pokusech prosím odpovídejte co nejrychleji, aniž byste udělali chyby.",
+        'HUN': "A  feladatod az lesz, hogy beazonosítsd az egyedül álló szót (ne a három szót, ami előtte jelenik meg). Ha az egyedül álló szó Bal, akkor nyomd meg az <kbd>f</kbd> billentyűt a bal középső ujjaddal! Ha az egyedül álló szó Jobb, akkor nyomd meg a <kbd>g</kbd> billentyűt a bal mutatóujjaddal! Ha az egyedül álló szó Fel, akkor nyomd meg a <kbd>j</kbd> billentyűt a jobb középső ujjaddal! Ha az egyedül álló szó Le, nyomd meg az <kbd>n</kbd> billentyűt a jobb mutatóujjaddal! Minden próbában próbálj meg olyan gyorsan válaszolni, amennyire lehetséges hibázás nélkül! A kísérleti blokkokban a felvillanó irány (fel, le, jobbra, balra) szavakon kívül kék betűszínű szavakat is fogsz látni. Ezeknél semmilyen gombot nem kell megnyomnod, csak olvasd el őket figyelmesen. Figyelem, némelyik szó bizonyos személyekben erős érzelmeket kelthet."
     },
     'p_i_practice': {
         'EN': "To make sure you understand the task, and to help you learn the response keys, we will give you a few practice trials. If you make a mistake, an error message will appear. After the practice trials, there will be 4 test runs. Each test run will last about 3 minutes and 20 seconds. You may also have a short break between runs. The total time is about 16 minutes.",

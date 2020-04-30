@@ -476,17 +476,21 @@ const CFG = {
           setTimeout(CFG.affective_words_primeprobe.hideWord,CFG.affective_words_primeprobe.blankDuration, stimDiv);
         },
         showWord: function(stimDiv){
-          var rand = Math.floor(Math.random() *  64);
           if (X.trials[X.trialNum]["isCongruent"]===1){
+            var rand = Math.floor(Math.random() *  neu_words.length);
             var theword = neu_words[rand];
             X.trials[X.trialNum]["word_id"] = "neu" + rand
             X.trials[X.trialNum]["word_content"] = theword
+            neu_words.splice(rand, 1)
           }else{
+            var rand = Math.floor(Math.random() *  neg_words.length);
             var theword = neg_words[rand];
             X.trials[X.trialNum]["word_id"] = "neg" + rand
             X.trials[X.trialNum]["word_content"] = theword
+            neg_words.splice(rand, 1)
           }
           // stimDiv.appendChild(theimage);
+          stimDiv.style.color = "#00FFFF";
           stimDiv.innerHTML = theword;
           X.responseOpen = true;
           // Responding is open for as long as necessary, except in debug mode
@@ -495,6 +499,7 @@ const CFG = {
 
         },
         hideWord: function(stimDiv){
+          stimDiv.style.color = "white";
           stimDiv.innerText = "";
           //stimDiv.removeChild(theimage);
           if(X.trialNum < X.trials.length)
@@ -502,12 +507,14 @@ const CFG = {
         },
 
         showPrime: function(stimDiv){
+            stimDiv.style.color = "white";
             let s = X.trials[X.trialNum].prime;
             stimDiv.innerHTML =  s + "<br/>" + s + "<br/>" + s;
             setTimeout(CFG.affective_primeprobe.hidePrime, CFG.primeprobe.primeDuration, stimDiv);
         },
 
         hidePrime: function(stimDiv) {
+            stimDiv.style.color = "white";
             stimDiv.innerText = "";
             stimDiv.classList.remove('prime');
             if(X.trialNum < X.trials.length)
@@ -515,6 +522,7 @@ const CFG = {
             setTimeout(CFG.affective_primeprobe.showProbe, CFG.affective_primeprobe.primeProbeGap, stimDiv);
         },
         showProbe: function(stimDiv) {
+            stimDiv.style.color = "white";
             stimDiv.classList.add('probe');
             stimDiv.innerText = X.trials[X.trialNum].probe;
             X.trials[X.trialNum].probeOnset = now();
@@ -527,6 +535,7 @@ const CFG = {
             setTimeout(CFG.affective_primeprobe.hideProbe, CFG.affective_primeprobe.probeDuration, stimDiv);
         },
         hideProbe: function(stimDiv) {
+            stimDiv.style.color = "white";
             stimDiv.innerText = "";
             stimDiv.classList.remove('probe');
             if(X.trialNum < X.trials.length)

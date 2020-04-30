@@ -170,6 +170,9 @@ function endBlock() {
 function endPractice() {
     if (X.type === "affective_primeprobe"){
       showDiv('AffectiveEndPractice')
+    }
+    else if (X.type === "affective_words_primeprobe") {
+      showDiv('AffectiveWordsEndPractice')
     }else{
       showDiv('EndPractice');
     }
