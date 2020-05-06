@@ -430,6 +430,11 @@ const LOC_STRINGS = {
         'CZ': "Druhé slovo",
         'HUN': "Második szó"
     },
+    'g_h_affective_words_primeprobe_posneg': {
+        'EN': "Second word",
+        'CZ': "Druhé slovo",
+        'HUN': "Második szó"
+    },
     'g_h_simon': {
         'EN': "Square colour",
         'CZ': "Barva čtverce",

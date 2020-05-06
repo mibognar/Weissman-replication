@@ -78,6 +78,7 @@
           'fájdalom', 'szívroham', 'hányás', 'koldus', 'hiba', 'mérgezés', 'járvány', 'vírus', 'penész', 'depresszió', 'szorongás',
           'horzsolás', 'árulás', 'ordít', 'kisemmiz', 'gyulladás', 'hazugság', 'merénylet', 'pokol', 'szörnyethal', 'katasztrófa','zúzódás',
         'viszér', 'migrén');
+
         let neu_words = new Array('ajtó', 'ablak', 'csésze', 'papír', 'bokor', 'fém', 'kék', 'kerék', 'füzet',
           'liszt', 'üveg', 'tégla', 'betű', 'kő', 'ceruza', 'szék', 'szem', 'drót', 'telefon', 'szőnyeg', 'cipőfűző',
           'bőr', 'pohár', 'tányér', 'gép', 'út', 'tábla', 'jármű', 'szín', 'hang', 'kilincs', 'homok', 'föld', 'szerszám',
@@ -87,6 +88,17 @@
           'folyosó', 'szoba', 'fal', 'csipesz', 'kar', 'kéz', 'láb', 'fájl', 'csomag', 'gép', 'néz', 'óra', 'pedál', 'fogó',
           'idő', 'toll', 'vezeték', 'tulaj', 'csoport', 'eszköz', 'tárgy', 'vízszintes', 'függőleges', 'négyzet', 'rombusz', 'téglalap',
           'kör', 'adat', 'hő', 'mér', 'jár', 'trapéz', 'vonal', 'húz', 'kapcsoló', 'szekrény', 'irány');
+
+        let pos_words = new Array('ügyes','gyönyörű', 'áldás', 'nyugodt', 'ünnep', 'tisztaság', 'kényelmes', 'magabiztos', 'védelmező', 'büszkeség',
+          'könnyed', 'elegáns', 'lelkes', 'eufórikus', 'tökéletes', 'kedvenc', 'kölyökkutya', 'jóság', 'mosoly', 'nevetés', 'hősies',
+           'szent', 'ideális', 'lenyűgöző', 'igazságos', 'szeretet', 'szerelem', 'szerencse', 'csoda', 'kegyelem', 'szerény', 'optimista',
+         'béke', 'békés', 'játékos', 'költői', 'udvarias', 'pozitív', 'megtiszteltetés', 'jólét', 'bizonyosság', 'újászületés', 'gazdagság',
+       'romantikus', 'biztonság', 'biztonságos', 'napsugár', 'okos', 'intelligens', 'megbízható', 'szép', 'lágy', 'stabil', 'sportos', 'siker',
+     'sikeres', 'édes', 'finom', 'kellemes', 'köszönet', 'győzelem', 'barátságos', 'virtuóz', 'tehetséges', 'bölcsesség', 'megéri', 'tehetség', 'tehetséges',
+   'stílusos', 'biztos', 'szolidaritás', 'őszinteség', 'jutalom', 'védelem', 'haladás', 'fejlődés', 'csodás', 'csokoládé', 'isteni', 'eredeti', 'illatos',
+ 'mágikus', 'szerethető', 'öröm', 'boldogság', 'vicces', 'humoros', 'szellemes', 'szórakoztató', 'szívmelengető', 'jóképű', 'zseniális', 'szabadság', 'egyenlőség',
+'testvériség', 'fantasztikus', 'nemes', 'empátia', 'extázis', 'aranyos', 'bátorság', 'jóízű', 'virágzó');
+
         if (X.type === "affective_primeprobe"){
           for (i = 1; i<=18; i++) {
             neg_images[i] = new Image();
@@ -223,6 +235,45 @@
               <p>S::g_i_accuracy70</p>
           </div>
           <div id="InstructionsAFFECTIVE_WORDS_PRIMEPROBE">
+              <h1>S::g_i_title</h1>
+              <p>S::p_i_overview</p>
+              <div class="row">
+                  <div>I::p_ex1</div>
+                  <div>I::p_ex2</div>
+              </div>
+              <p>S::p_i_aff_words_detail</p>
+              <p>S::p_i_responses</p>
+              <div class="response-table">
+                  <div class="labels">
+                      <div>S::g_g_response</div>
+                      <div>S::g_g_stimulus</div>
+                      <div>S::g_g_finger</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::f</kbd></div>
+                      <div>S::g_s_left</div>
+                      <div>S::g_f_left_middle</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::g</kbd></div>
+                      <div>S::g_s_right</div>
+                      <div>S::g_f_left_index</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::n</kbd></div>
+                      <div>S::g_s_down</div>
+                      <div>S::g_f_right_index</div>
+                  </div>
+                  <div>
+                      <div><kbd>K::j</kbd></div>
+                      <div>S::g_s_up</div>
+                      <div>S::g_f_right_middle</div>
+                  </div>
+              </div>
+              <p>S::p_i_practice</p>
+              <p>S::g_i_accuracy70</p>
+          </div>
+          <div id="InstructionsAFFECTIVE_WORDS_PRIMEPROBE_POSNEG">
               <h1>S::g_i_title</h1>
               <p>S::p_i_overview</p>
               <div class="row">

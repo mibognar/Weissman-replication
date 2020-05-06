@@ -28,7 +28,7 @@ All .csv files have a header row containing the variable names.
 //phpinfo();
 error_reporting(0);
 
-const TASK_LIST = array('flanker', 'affective_primeprobe','affective_words_primeprobe', 'primeprobe', 'simon', 'stroop');
+const TASK_LIST = array('flanker', 'affective_primeprobe','affective_words_primeprobe','affective_words_primeprobe_posneg', 'primeprobe', 'simon', 'stroop');
 const META_FILE_NAME = '../data/private/participant-metadata.csv';
 const ERROR_FILE_NAME = '../data/private/error.log';
 
