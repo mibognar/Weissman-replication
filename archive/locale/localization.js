@@ -373,7 +373,7 @@ const LOC_STRINGS = {
     'g_g_end_detail': {
         'EN': "Thank you for your participation. Your overall score was <span id='Score'></span>%.",
         'CZ': "Děkujeme za účast. Vaše celkové skóre je <span id='Score'></span>%.",
-        'HUN': "A kísérlet véget ért, köszönjük a részvételt! Az átlagos eredményed <span id='Score'></span>% volt. A pontot a kitöltési határidő végén írjuk be."
+        'HUN': "A kísérlet véget ért, köszönjük a részvételt! Az átlagos eredményed <span id='Score'></span>% volt."
     },
     'g_g_end_contact': {
         'EN': "If you have any questions or concerns about the experiment, you can contact the lead researcher <a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>marton.balazs.kovacs@gmail.com</a>",
@@ -383,7 +383,7 @@ const LOC_STRINGS = {
     'g_g_data_save_ok': {
         'EN': "The data have been saved successfully.",
         'CZ': "Data byla úspěšně uložena",
-        'HUN': "Az eredményed elmentésre került."
+        'HUN': "Az eredményed elmentésre került. Kövesd ezt a linket, hogy beírhassuk a pontot: https://forms.gle/1xuvmiBuLgbzmj2h8"
     },
     'g_g_data_save_error': {
         'EN': "An error occurred while saving the data. The server said:", // Participants probably want info on whether they'll be paid here
