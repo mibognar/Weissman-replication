@@ -383,7 +383,7 @@ const LOC_STRINGS = {
     'g_g_data_save_ok': {
         'EN': "The data have been saved successfully.",
         'CZ': "Data byla úspěšně uložena",
-        'HUN': "Az eredményed elmentésre került. Kövesd ezt a linket, hogy beírhassuk a pontot: https://forms.gle/1xuvmiBuLgbzmj2h8"
+        'HUN': "Az eredményed elmentésre került. Kövesd ezt a linket, hogy beírhassuk a pontot: <a href='https://forms.gle/1xuvmiBuLgbzmj2h8'>https://forms.gle/1xuvmiBuLgbzmj2h8</a>"
     },
     'g_g_data_save_error': {
         'EN': "An error occurred while saving the data. The server said:", // Participants probably want info on whether they'll be paid here
