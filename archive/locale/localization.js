@@ -373,7 +373,7 @@ const LOC_STRINGS = {
     'g_g_end_detail': {
         'EN': "Thank you for your participation. Your overall score was <span id='Score'></span>%.",
         'CZ': "Děkujeme za účast. Vaše celkové skóre je <span id='Score'></span>%.",
-        'HUN': "A kísérlet véget ért, köszönjük a részvételt! Az átlagos eredményed <span id='Score'></span>% volt."
+        'HUN': "A kísérlet véget ért, köszönjük a részvételt! Az átlagos eredményed <span id='Score'></span>% volt. A pontot a kitöltési határidő végén írjuk be."
     },
     'g_g_end_contact': {
         'EN': "If you have any questions or concerns about the experiment, you can contact the lead researcher <a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>marton.balazs.kovacs@gmail.com</a>",

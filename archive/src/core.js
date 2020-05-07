@@ -169,10 +169,10 @@ function endBlock() {
 
 function endPractice() {
     if (X.type === "affective_primeprobe"){
-      showDiv('AffectiveEndPractice')
+      showDiv('AffectiveEndPractice');
     }
-    else if (X.type === "affective_words_primeprobe") {
-      showDiv('AffectiveWordsEndPractice')
+    else if (X.type === "affective_words_primeprobe" || X.type === "affective_words_primeprobe_posneg") {
+      showDiv('AffectiveWordsEndPractice');
     }else{
       showDiv('EndPractice');
     }
