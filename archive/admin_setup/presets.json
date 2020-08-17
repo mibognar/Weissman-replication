@@ -1,0 +1,8 @@
+{
+  "types":[
+    {"type":"flanker", "name": "Basic Flanker Test"},
+    {"type":"primeprobe", "name": "Basic Primeprobe Test"},
+    {"type":"simon", "name": "Basic Simon Test"},
+    {"type":"stroop", "name": "Basic Stroop Test"}
+  ]
+}

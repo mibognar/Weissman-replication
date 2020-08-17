@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <title>Weissman Replication Experiment</title>
     <link rel="stylesheet" href="style/main.css"/>
+    <script type="text/javascript">
+    if (window.location.search == ""){
+    const url = "admin_setup/online_setup.json";
+    const request = new XMLHttpRequest();
+    request.open('GET', url, true);
+    request.onload = function() {
+      if (request.status === 200) {
+        const data = JSON.parse(request.responseText);
+        window.location.href = window.location.href + "?loc=hun&name="+ data.online_preset
+      }
+    }
+    request.onerror = function() {
+      console.error('An error occurred fetching the JSON from ' + url);
+      showDiv('Error');
+      return;
+    }
+    request.send();
+    }
+    </script>
     <script src="locale/localization.js"></script>
     <script src="src/core.js"></script>
     <script src="src/misc.js"></script>
