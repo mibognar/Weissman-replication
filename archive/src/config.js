@@ -19,7 +19,7 @@ const sharedCFG = {
                 stimDiv.className = "feedback";
                 if(!(kbEvent instanceof KeyboardEvent))
                     stimDiv.innerHTML = S('g_r_too_slow').toUpperCase();
-                else if(X.trials[X.trialNum].responseContent === X.trials[X.trialNum].responseTarget)
+                else if(X.trials[X.trialNum].responseContent === X.trials[X.trialNum].responseTarget.toLowerCase())
                     stimDiv.innerHTML = S('g_r_correct').toUpperCase();
                 else
                     stimDiv.innerHTML = S('g_r_incorrect').toUpperCase();
