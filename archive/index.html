@@ -85,38 +85,27 @@
 
         let neg_images = new Array();
         let neu_images = new Array();
-        let neg_words = new Array('pusztítás','hiány', 'vád', 'fájdalmas', 'agresszió',
-          'haldoklás', 'amputál', 'szenvedés', 'támadás', 'garázdaság', 'áruló', 'fenyegetés',
-          'véres', 'szakítás', 'összetört', 'brutális', 'lenéző', 'fertőzés','romlott','baleset',
-          'nyomorék', 'krízis', 'átok', 'kárhozat', 'széklet', 'rombolás', 'diktátor', 'halál',
-          'mocskos', 'nyomor', 'ellenség','rabszolgaság', 'gonosz', 'kudarc', 'álságos', 'bűnöző',
-          'tömeggyilkos', 'bűnös', 'zaklat', 'gyűlölet', 'herpesz', 'megaláz', 'sérülés', 'viszketés',
-          'gyilkosság', 'gyász', 'eltaszít', 'bűz', 'kínoz', 'szánalmas', 'veszély', 'perverz', 'veszteség',
-          'büntetés', 'örjöngés', 'elutasítás', 'rothadás', 'romhalmaz', 'átverés', 'szégyen', 'zokog', 'gyanús',
-          'hulladék', 'csapda', 'terror', 'robbanás', 'sikoly', 'kibelez', 'rettenet', 'betegség', 'genny', 'ostoba', 'erkölcstelen',
-          'fájdalom', 'szívroham', 'hányás', 'koldus', 'hiba', 'mérgezés', 'járvány', 'vírus', 'penész', 'depresszió', 'szorongás',
-          'horzsolás', 'árulás', 'ordít', 'kisemmiz', 'gyulladás', 'hazugság', 'merénylet', 'pokol', 'szörnyethal', 'katasztrófa','zúzódás',
-        'viszér', 'migrén');
+        let neg_words = new Array('zord','bosszúság','fáradt','hátrány','lelketlen','szemét','nyálkás','kapzsiság',
+        'túlhajszolt','nehézség','kihalt','börtön','koporsó','hányinger','nyálka',
+        'vesztes','reuma','csalódott','halotti','halott','romlás','csavargó','begyulladt','csúnya',
+        'szar','lépfene','vérhas','kizár','bosszús','ittas','ijesztő','penész','bűnösség','temetés',
+        'nyomorgó','gyáva','piszok','limfóma','sértő','beteg','lopás','koldus','hanyatlás','elhagy',
+        'narancsbőr','méltatlan','mumpsz','taknyos','tályog','lefog','szenvedni','lepra','elfajzott','kényszer',
+        'éhezik','váladék','heroin','bénít','házsártos','szmog','megvető','lopás','börtön','retteg','fogoly','hálátlan');
 
-        let neu_words = new Array('ajtó', 'ablak', 'csésze', 'papír', 'bokor', 'fém', 'kék', 'kerék', 'füzet',
-          'liszt', 'üveg', 'tégla', 'betű', 'kő', 'ceruza', 'szék', 'szem', 'drót', 'telefon', 'szőnyeg', 'tépőzár',
-          'bőr', 'pohár', 'tányér', 'gép', 'út', 'tábla', 'jármű', 'szín', 'hang', 'kilincs', 'homok', 'föld', 'szerszám',
-          'kosár', 'polc', 'csempe', 'járda', 'pad', 'anyag', 'festék', 'pont', 'sáv', 'oszlop', 'szóköz', 'szám', 'négy',
-          'három', 'kettő', 'egy', 'kilenc', 'tizenegy', 'tizenöt', 'csavar', 'lap', 'lámpa', 'sárga', 'zsák', 'vas', 'víz',
-          'villa', 'kanál', 'cérna', 'fogas', 'tálca', 'lista', 'szivacs', 'takaró', 'doboz', 'egyenes', 'só', 'szalvéta', 'törölköző', 'nagy', 'kicsi',
-          'folyosó', 'szoba', 'fal', 'csipesz', 'kar', 'kéz', 'láb', 'fájl', 'csomag', 'gép', 'néz', 'óra', 'pedál', 'fogó',
-          'idő', 'toll', 'vezeték', 'tulaj', 'csoport', 'eszköz', 'tárgy', 'vízszintes', 'függőleges', 'négyzet', 'rombusz', 'téglalap',
-          'kör', 'adat', 'hő', 'mér', 'jár', 'trapéz', 'vonal', 'húz', 'kapcsoló', 'szekrény', 'irány');
+        let neu_words = new Array('megfigyel','rögtön','munkás','vérvonal','példátlan','gyártás','lila',
+        'hátizsák','ugrás','folyadék','kezelő','zarándok','globális','választó','ropogtat','hét',
+        'változás','orrszarvú','méhlepény','egyenlet','sáv','töltő','válasz','járda','műértő',
+        'liheg','kereplő','hegesztő','lakáj','mikrofon','nevező','fazék','tunkol','agár','verseny',
+        'kóla','kanca','főcím','lábszár','bányász','csaj','sor','benyomás','különös','borjú','kaptár',
+        'menyét','varr','kalapács','látszat','serdülő');
 
-        let pos_words = new Array('ügyes','gyönyörű', 'áldás', 'nyugodt', 'ünnep', 'tisztaság', 'kényelmes', 'magabiztos', 'védelmező', 'büszkeség',
-          'könnyed', 'elegáns', 'lelkes', 'eufórikus', 'tökéletes', 'kedvenc', 'kölyökkutya', 'jóság', 'mosoly', 'nevetés', 'hősies',
-           'szent', 'ideális', 'lenyűgöző', 'igazságos', 'szeretet', 'szerelem', 'szerencse', 'csoda', 'kegyelem', 'szerény', 'optimista',
-         'béke', 'békés', 'játékos', 'költői', 'udvarias', 'pozitív', 'megtiszteltetés', 'jólét', 'bizonyosság', 'újjászületés', 'gazdagság',
-       'romantikus', 'biztonság', 'biztonságos', 'napsugár', 'okos', 'intelligens', 'megbízható', 'szép', 'lágy', 'stabil', 'sportos', 'siker',
-     'sikeres', 'édes', 'finom', 'kellemes', 'köszönet', 'győzelem', 'barátságos', 'virtuóz', 'tehetséges', 'bölcsesség', 'megéri', 'tehetség', 'tehetséges',
-   'stílusos', 'biztos', 'szolidaritás', 'őszinteség', 'jutalom', 'védelem', 'haladás', 'fejlődés', 'csodás', 'csokoládé', 'isteni', 'eredeti', 'illatos',
- 'mágikus', 'szerethető', 'öröm', 'boldogság', 'vicces', 'humoros', 'szellemes', 'szórakoztató', 'szívmelengető', 'jóképű', 'zseniális', 'szabadság', 'egyenlőség',
-'testvériség', 'fantasztikus', 'nemes', 'empátia', 'extázis', 'aranyos', 'bátorság', 'jóízű', 'virágzó');
+
+        let pos_words = new Array('gyógymód','gyümölcs','angyal','bőséges','holdfény','kert','gondtalan','napkelte','testvéri',
+        'felfedez','értékes','sütemény','tisztaság','elegáns','anyai','család','croissant','színes','partner','ész','selymes',
+        'napfény','tiszta','édesem','kutyus','mami','hálás','nyuszi','nyugalom','képzelet','álom','gyógyulás','holdfény','bizalom',
+        'mosoly','napnyugta','felfrissít','növény','igazi','adni','kedvesség','wellness','játék','ötlet','ebéd','szabadság','jóképű',
+        'eper','gyerek','trópusok','víz','élő','papa','jó','masszázs',);
 
         if (X.type === "affective_primeprobe"){
           for (i = 1; i<=18; i++) {
