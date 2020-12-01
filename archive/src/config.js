@@ -396,6 +396,8 @@ const CFG = {
       primeDuration: 133,
       primeProbeGap: 33,
       probeDuration: 133,
+      neg_word_num: 0,
+      neu_word_num: 0,
       getResponseMap: function() {
           if(CFG.primeprobe.stimuli.length === 0)
               CFG.primeprobe.stimuli = ['g_s_left', 'g_s_right', 'g_s_up', 'g_s_down'];
@@ -477,17 +479,17 @@ const CFG = {
         },
         showWord: function(stimDiv){
           if (X.trials[X.trialNum]["isCongruent"]===1){
-            var rand = Math.floor(Math.random() *  neu_words.length);
-            var theword = neu_words[rand];
-            X.trials[X.trialNum]["word_id"] = "neu" + rand
-            X.trials[X.trialNum]["word_content"] = theword
-            neu_words.splice(rand, 1)
+            var theword = neu_words[CFG.affective_words_primeprobe.neu_word_num];
+            CFG.affective_words_primeprobe.neu_word_num += 1;
+            X.trials[X.trialNum]["word_id"] = "neu" + CFG.affective_words_primeprobe.neu_word_num;
+            X.trials[X.trialNum]["word_content"] = theword;
+            console.log("neutral: "+ theword);
           }else{
-            var rand = Math.floor(Math.random() *  neg_words.length);
-            var theword = neg_words[rand];
-            X.trials[X.trialNum]["word_id"] = "neg" + rand
-            X.trials[X.trialNum]["word_content"] = theword
-            neg_words.splice(rand, 1)
+            var theword = neg_words[CFG.affective_words_primeprobe.neg_word_num];
+            CFG.affective_words_primeprobe.neg_word_num += 1;
+            X.trials[X.trialNum]["word_id"] = "neg" + CFG.affective_words_primeprobe.neg_word_num;
+            X.trials[X.trialNum]["word_content"] = theword;
+            console.log("negative: "+ theword);
           }
           // stimDiv.appendChild(theimage);
           stimDiv.style.color = "#00FFFF";
