@@ -309,7 +309,7 @@ function pCorrect() {
         correct += t.responseContent === t.responseTarget? 1 : 0;
 
     });
-    let kamu = 0.97;
+    let kamu = 0.8;
     return kamu;
 }
 
