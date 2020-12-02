@@ -146,12 +146,13 @@ const LOC_STRINGS = {
     'g_c_summary': {
         'EN': "<strong>summary of the study</strong>: text",
         'CZ': "<strong>souhrn studie</strong>: Cílem výzkumu je replikovat předchozí experiment. Experiment zkoumá, jak lidé zpracovávají informace a rozhodují.",
-        'HUN': "<strong>A vizsgálat célja</strong>: A kutatás célja egy korábbi kísérlet megismétlése. A kísérlet azt kutatja, hogyan dolgozod fel az információkat és hozol döntéseket."
+        'HUN': "<strong>A vizsgálat célja</strong>: A kutatás célja megvizsgálni különböző valenciájú szavak kognitív kontrollra gyakorolt hatását. "
     },
     'g_c_data': {
         'EN': "<strong>data handling</strong>: text",
         'CZ': "<strong>Nakládání s daty:</strong>: Během experimentů budeme z evidenčních důvodů sbírat některé vaše osobní údaje (věk, pohlaví) a údaje o vašem výkonu. Vaše osobní údaje nebudou sdělovány nikomu mimo výzkumný tým. Údaje o vašem výkonu v experimentech budou využity pouze pro vyhodnocení experimentů a nebudou samostatně sdělovány dalším osobám. Výsledky budou prezentovány nebo publikovány způsobem, který neumožňuje identifikaci výsledků jednotlivých osob.",
-        'HUN': "<strong>Adatkezelés</strong>: Szigorúan bizalmasan kezelünk minden olyan személyes információt, amit a kutatás keretén belül gyűjtünk össze. A kutatás során nyert adatokat kóddal ellátva biztonságos számítógépeken tároljuk. A kutatás során nyert adatokat összegezzük. Az ELTE PPK Affektív Pszichológia Tanszék Döntéspszichológiai Kutatócsoportja, mint adatkezelő, fenti személyes adataimat bizalmasan kezeli, más adatkezelőnek, adatfeldolgozónak nem adja át. E tényállás részleteit a „Hozzájárulás adatkezeléshez” c. dokumentum tartalmazza: http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/ Az adatkezelésről szóló szabályozásról részletesebben pedig itt tájékozódhat: https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf A kutatás egy későbbi szakaszában még egy kísérletet fogunk kiküldeni Önnek. A kutatás során nyert személyes adatait arra használjuk fel, hogy a két kísérletben adott válaszait össze tudjuk kötni. Az azonosítására alkalmas adatokat (NEPTUN kód) ezután törölni fogjuk, így válaszai már nem lesznek semmilyen módon Önhöz köthetők. Az anononimizált adatait ezután más kutatókkal megosztjuk."
+        'HUN': "<strong>Adatkezelés</strong>: Szigorúan bizalmasan kezelünk minden olyan személyes információt, amit a kutatás keretén belül gyűjtünk össze. A kutatás során nyert adatokat kóddal ellátva biztonságos számítógépeken tároljuk. A kutatás során nyert adatokat összegezzük. Az ELTE PPK Affektív Pszichológia Tanszék Döntéspszichológiai Kutatócsoportja, mint adatkezelő, fenti személyes adataidat bizalmasan kezeli, más adatkezelőnek, adatfeldolgozónak nem adja át. E tényállás részleteit a Hozzájárulás adatkezeléshez c. dokumentum tartalmazza: <a href=http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/>http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/</a> Az adatkezelésről szóló szabályozásról részletesebben pedig itt tájékozódhatsz: <a href=https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf>https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf</a>. A kutatás során nyert személyes adataidat arra használjuk fel, hogy regisztrálhassuk a részvételért járó kurzuspontokat. Az azonosítására alkalmas adatokat (NEPTUN kód) ezután törölni fogjuk. Válaszaid nem lesznek semmilyen módon hozzád köthetők. Az anonimizált adataidat más kutatókkal megosztjuk."
+
     },
     'g_c_participation': {
         'EN': "<strong>participation</strong>: text",
@@ -198,7 +199,7 @@ const LOC_STRINGS = {
             "<a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>" +
             "marton.balazs.kovacs@gmail.com</a>",
         'CZ': "Pokud máte nějaké dotazy, napište na email <a href='mailto:dechterenko@praha.psu.cas.cz?subject=Weissman experiment'>dechterenko@praha.psu.cas.cz</a> (Filip Děchtěrenko)",
-        'HUN': "Ha bármilyen kérdésed, aggályod vagy panaszod van a kísérlettel kapcsolatban, kérem keresd Bognár Miklós kutatóasszisztenst <a href='mailto:miklos.bognar92@gmail.com?subject=Weissman experiment'>miklos.bognar92@gmail.com</a>",
+        'HUN': "Ha bármilyen kérdésed, aggályod vagy panaszod van a kísérlettel kapcsolatban, kérem keresd Bognár Miklóst <a href='mailto:bognar.miklos@ppk.elte.hu?subject=Weissman experiment'>bognar.miklos@ppk.elte.hu</a>",
     },
     'g_c_email_ec': {
         'EN': "You may also contact Human Subjects Protection for questions about your rights as a research subject <a href='mailto:strategia@rk.elte.hu?subject=Weissman replication'>strategia@rk.elte.hu</a>",
