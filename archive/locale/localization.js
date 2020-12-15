@@ -146,18 +146,18 @@ const LOC_STRINGS = {
     'g_c_summary': {
         'EN': "<strong>summary of the study</strong>: text",
         'CZ': "<strong>souhrn studie</strong>: Cílem výzkumu je replikovat předchozí experiment. Experiment zkoumá, jak lidé zpracovávají informace a rozhodují.",
-        'HUN': "<strong>A vizsgálat célja</strong>: A kutatás célja megvizsgálni különböző valenciájú szavak kognitív kontrollra gyakorolt hatását. "
+        'HUN': "Ön egy tudományos kutatásban vesz részt, amelynek vezetője Aczél Balázs. Jelen vizsgálat célja egy, a kognitív kontroll háttérmechanizmusait feltáró vizsgálat lefolytatása. A fenti vizsgálatok, a próbák elvégzésének káros következménye nincs. A kutatásban való részvétel teljesen önkéntes. A feladatok során lehetőség van annak megszakítására, hogy az ne legyen fárasztó. A vizsgálatot bármikor indoklás nélkül akár végleg is megszakíthatja, vagy a kérdések megválaszolását megtagadhatja. A vizsgálatban történt részvételért anyagi javadalmazás nem jár. A vizsgálat során online teszteket kell elvégeznie, amelyben kognitív feladatokat kell a lehető leggyorsabban és a legpontosabban elvégeznie, ami kb. 20 percig tart. A kutatás során kapott eredményekről később publikációk jelennek meg, és tudományos konferenciákon kerülnek ismertetésre. Ezekről a kívánságnak megfelelően szóbeli vagy írásos tájékoztatást adunk."
     },
     'g_c_data': {
         'EN': "<strong>data handling</strong>: text",
         'CZ': "<strong>Nakládání s daty:</strong>: Během experimentů budeme z evidenčních důvodů sbírat některé vaše osobní údaje (věk, pohlaví) a údaje o vašem výkonu. Vaše osobní údaje nebudou sdělovány nikomu mimo výzkumný tým. Údaje o vašem výkonu v experimentech budou využity pouze pro vyhodnocení experimentů a nebudou samostatně sdělovány dalším osobám. Výsledky budou prezentovány nebo publikovány způsobem, který neumožňuje identifikaci výsledků jednotlivých osob.",
-        'HUN': "<strong>Adatkezelés</strong>: Szigorúan bizalmasan kezelünk minden olyan személyes információt, amit a kutatás keretén belül gyűjtünk össze. A kutatás során nyert adatokat kóddal ellátva biztonságos számítógépeken tároljuk. A kutatás során nyert adatokat összegezzük. Az ELTE PPK Affektív Pszichológia Tanszék Döntéspszichológiai Kutatócsoportja, mint adatkezelő, fenti személyes adataidat bizalmasan kezeli, más adatkezelőnek, adatfeldolgozónak nem adja át. E tényállás részleteit a Hozzájárulás adatkezeléshez c. dokumentum tartalmazza: <a href=http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/>http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/</a> Az adatkezelésről szóló szabályozásról részletesebben pedig itt tájékozódhatsz: <a href=https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf>https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf</a>. A kutatás során nyert személyes adataidat arra használjuk fel, hogy regisztrálhassuk a részvételért járó kurzuspontokat. Az azonosítására alkalmas adatokat (NEPTUN kód) ezután törölni fogjuk. Válaszaid nem lesznek semmilyen módon hozzád köthetők. Az anonimizált adataidat más kutatókkal megosztjuk."
+        'HUN': "Szigorúan bizalmasan kezelünk minden olyan információt, amit a kutatás keretén belül gyűjtünk össze. A kutatás során nyert adatokat kóddal ellátva biztonságos számítógépen őrizzük. Az egyéni kódot minden esetben a kutatásban résztvevő asszisztens adja, csak ő ismeri és ő fér hozzájuk. A kutatás során nyert adatokon statisztikai elemzéseket végzünk, amelyekből egyetlen résztvevő azonossága sem állapítható meg. Csatoljuk az adatkezeléssel kapcsolatos részletes tájékoztatót (Hozzájárulás adatkezeléshez, ill. ennek Melléklete – l. alább). A vizsgálat eredményéről orvosi jellegű zárójelentés, laborlelet nem készül. A vizsgálat során találtakról a kívánságnak megfelelően szóbeli tájékoztatást adunk."
 
     },
     'g_c_participation': {
         'EN': "<strong>participation</strong>: text",
         'CZ': "Účast ve studii je zcela dobrovolná and můžete se z ní kdykoli odhlásit uzavřením okna internetového prohlížeče. Po sesbírání všech dat vylosujeme 25 lidí a každý vylosovaný obdrží 200,-Kč. Pokud nedokončíte úlohu, nebo pokud ji dokončíte pod spodní hranicí výkonu, nemůžeme Vás zařadit do slosování o odměnu.",
-        'HUN': "<strong>Részvétel</strong>: A kutatásban való részvétel teljesen önkéntes. A vizsgálatot bármikor indoklás nélkül megszakíthatod, vagy a kérdések megválaszolását megtagadhatod a böngésző ablak bezárásával."
+        'HUN': "Kijelentem, hogy a kutatásban való részvételem körülményeiről részletes tájékoztatást kaptam, a feltételekkel egyetértek, a részvételhez hozzájárulok. Hozzájárulok továbbá ahhoz, hogy a vizsgálat során a rólam felvett, személyem azonosítására nem alkalmas adatok más kutatók számára is hozzáférhetők legyenek. Fenntartom a jogot arra, hogy a vizsgálat során annak folytatásától bármikor elállhassak. Ilyen esetben a rólam addig felvett adatokat törölni kell. Nem kezelnek neurológiai vagy pszichiátriai betegség miatt, és korábban sem álltam ilyen jellegű kezelés alatt. Az ELTE PPK Affektív pszichológia tanszék Döntéspszichológiai kutatócsoportja, mint adatkezelő, fenti adataimat bizalmasan kezeli, más adatkezelőnek, adatfeldolgozónak nem adja át. E tényállás részleteit a „Hozzájárulás adatkezeléshez” c. dokumentum tartalmazza: http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/. Az adatkezelésről szóló szabályozásról részletesebben pedig itt tájékozódhat: https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf A „Hozzájárulás az adatkezeléshez” c. dokumentumot elolvastam és a benne foglaltakat elfogadom."
     },
     'g_c_aff_participation': {
         'EN': "<strong>participation</strong>: text",
@@ -167,7 +167,7 @@ const LOC_STRINGS = {
     'g_c_aff_words_participation': {
         'EN': "<strong>participation</strong>: text",
         'CZ': "Účast ve studii je zcela dobrovolná and můžete se z ní kdykoli odhlásit uzavřením okna internetového prohlížeče. Po sesbírání všech dat vylosujeme 25 lidí a každý vylosovaný obdrží 200,-Kč. Pokud nedokončíte úlohu, nebo pokud ji dokončíte pod spodní hranicí výkonu, nemůžeme Vás zařadit do slosování o odměnu.",
-        'HUN': "<strong>Részvétel</strong>: A kutatásban való részvétel teljesen önkéntes. A vizsgálatot bármikor indoklás nélkül megszakíthatod, vagy a kérdések megválaszolását megtagadhatod a böngésző ablak bezárásával. FIGYELEM: A kísérlet a nyugalom megzavarására alkalmas szavakat is tartalmaz."
+        'HUN': "Kijelentem, hogy a kutatásban való részvételem körülményeiről részletes tájékoztatást kaptam, a feltételekkel egyetértek, a részvételhez hozzájárulok. Hozzájárulok továbbá ahhoz, hogy a vizsgálat során a rólam felvett, személyem azonosítására nem alkalmas adatok más kutatók számára is hozzáférhetők legyenek. Fenntartom a jogot arra, hogy a vizsgálat során annak folytatásától bármikor elállhassak. Ilyen esetben a rólam addig felvett adatokat törölni kell. Nem kezelnek neurológiai vagy pszichiátriai betegség miatt, és korábban sem álltam ilyen jellegű kezelés alatt. Az ELTE PPK Affektív pszichológia tanszék Döntéspszichológiai kutatócsoportja, mint adatkezelő, fenti adataimat bizalmasan kezeli, más adatkezelőnek, adatfeldolgozónak nem adja át. E tényállás részleteit a „Hozzájárulás adatkezeléshez” c. dokumentum tartalmazza: http://decisionlab.elte.hu/hozzajarulas-adatkezeleshez/. Az adatkezelésről szóló szabályozásról részletesebben pedig itt tájékozódhat: https://ppk.elte.hu/file/Hozzajarulas_adatkezeleshez_melleklet_2018.pdf A „Hozzájárulás az adatkezeléshez” c. dokumentumot elolvastam és a benne foglaltakat elfogadom."
     },
     'g_c_title2': {
         'EN': "Consent form",
@@ -177,12 +177,12 @@ const LOC_STRINGS = {
     'g_c_p1': {
         'EN': "first paragraph text",
         'CZ': "Prohlašuji, že jsem se dobrovolně zúčastnil/a studie, kterou provedl Filip Děchtěrenko (Psychologický ústav AV ČR). Před zahájením experimentu jsem obdržel/a uspokojivé informace o povaze vyšetřování; Netrpím psychiatrickým onemocněním; Během testu nejsem pod vlivem alkoholu nebo drog.",
-        'HUN': "Felelősségem teljes tudatában kijelentem, hogy a mai napon az Eötvös Loránd Tudományegyetem, Dr. Aczél Balázs kutatásvezető által végzett vizsgálatban önként veszek részt; a vizsgálat jellegéről, annak megkezdése előtt kielégítő tájékoztatást kaptam; nem szenvedek semmilyen pszichiátriai betegségben; a vizsgálat idején alkohol vagy drogok hatása alatt nem állok."
+        'HUN': "A továbblépéssel hozzájárul ahhoz, hogy a vizsgálat során az Önről felvett, személye azonosítására nem alkalmas adatokat kutatási célra felhasználjuk, illetve, hogy más kutatók számára is hozzáférhetők legyenek. Kijelentem, hogy 18 éves elmúltam, a kutatásban való részvételem körülményeiről részletes tájékoztatást kaptam, a feltételekkel egyetértek, a részvételt vállalom."
     },
     'g_c_p2': {
         'EN': "second paragraph text",
         'CZ': "Rozumím, že moje osobní údaje pro identifikaci jsou důvěrné. Souhlasím s dostupností dalších osobních údajů z mé osobní totožnosti v průběhu výzkumu. Vyhrazuji si právo kdykoli během vyšetřování odstoupit. V tomto případě musí být vymazána data, která jsem poskytl/a.",
-        'HUN': "Tudomásul veszem, hogy az azonosításomra alkalmas személyi adataimat bizalmasan kezelik. Hozzájárulok ahhoz, hogy a vizsgálat során a rólam felvett, személyem azonosítására nem alkalmas adatok más kutatók számára is hozzáférhetők legyenek. Fenntartom a jogot arra, hogy a vizsgálat során annak folytatásától bármikor elállhassak. Ilyen esetben a rólam addig felvett adatokat törölni kell. Tudomásul veszem, hogy csak a teljesen befejezett kitöltésért kapok pontot a Pszichológiai kísérletben és tudományos aktivitásban való részvétel nevű kurzuson."
+        'HUN': ""
     },
     'g_c_incomplete': {
         'EN': "If you do not complete the task, or we feel that you completed it to an unsatisfactory standard (ie. you do not follow the instructions), you will not be compensated.",
@@ -199,17 +199,17 @@ const LOC_STRINGS = {
             "<a href='mailto:marton.balazs.kovacs@gmail.com?subject=Weissman experiment'>" +
             "marton.balazs.kovacs@gmail.com</a>",
         'CZ': "Pokud máte nějaké dotazy, napište na email <a href='mailto:dechterenko@praha.psu.cas.cz?subject=Weissman experiment'>dechterenko@praha.psu.cas.cz</a> (Filip Děchtěrenko)",
-        'HUN': "Ha bármilyen kérdésed, aggályod vagy panaszod van a kísérlettel kapcsolatban, kérem keresd Bognár Miklóst <a href='mailto:bognar.miklos@ppk.elte.hu?subject=Weissman experiment'>bognar.miklos@ppk.elte.hu</a>",
+        'HUN': "Ha bármilyen kérdése, aggálya vagy panasza van a kísérlettel kapcsolatban, kérem keresse Bognár Miklóst <a href='mailto:bognar.miklos@ppk.elte.hu?subject=Weissman experiment'>bognar.miklos@ppk.elte.hu</a>",
     },
     'g_c_email_ec': {
         'EN': "You may also contact Human Subjects Protection for questions about your rights as a research subject <a href='mailto:strategia@rk.elte.hu?subject=Weissman replication'>strategia@rk.elte.hu</a>",
         'CZ': "Také můžete kontaktovat etickou komisi ohledně svých práv jako výzkumný subjekt: Dr. Miroslav Filip (<a href='mailto:filip@psu.cas.cz?subject=Weissman replication'>filip@psu.cas.cz</a>), Etické komise PsÚ AV ČR, Veveří 97, Brno 60200)",
-        'HUN': "Továbbá írhatsz az ELTE adatvédelmi tisztviselőjének Dr. Rigó Kingának (<a href='mailto:strategia@rk.elte.hu?subject=Weissman replication'>strategia@rk.elte.hu</a>) [ELTE Adat- és Stratégiai Információkezelési Iroda; 1053 Budapest, Ferenciek tere 6.]"
+        'HUN': ""
     },
     'g_c_agree': {
         'EN': "<strong>if you are fine with it click on the box</strong>",
         'CZ': "Pokud souhlasíte s výše uvedenými podmínkami, potvrďte tento souhlas zaškrtnutím políčka. Děkujeme předem za spolupráci!",
-        'HUN': "<strong>Kérem, amennyiben egyetértesz a fenti feltételekkel, és hozzájárulsz a kutatásban való részvételhez, ezt az állítás mellett megjelenő szürke mező kipipálásával igazold. Együttműködésedet előre is köszönjük!</strong>"
+        'HUN': "<strong>A „Hozzájárulás az adatkezeléshez” c. dokumentumot elolvastam és a benne foglaltakat elfogadom.</strong>"
     },
     'g_c_agree2': {
         'EN': "<strong>if you are fine with it click on the box</strong>",

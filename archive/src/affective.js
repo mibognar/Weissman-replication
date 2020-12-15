@@ -20,7 +20,7 @@ let pos_words = new Array('gyógymód','gyümölcs','angyal','bőséges','holdf�
 'felfedez','értékes','sütemény','tisztaság','elegáns','anyai','család','croissant','színes','partner','ész','selymes',
 'napfény','tiszta','édesem','kutyus','mami','hálás','nyuszi','nyugalom','képzelet','álom','gyógyulás','holdfény','bizalom',
 'mosoly','napnyugta','felfrissít','növény','igazi','adni','kedvesség','wellness','játék','ötlet','ebéd','szabadság','jóképű',
-'eper','gyerek','trópusok','víz','élő','papa','jó','masszázs',);
+'eper','gyerek','trópusok','víz','élő','papa','jó','masszázs');
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
