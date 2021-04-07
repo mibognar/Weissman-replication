@@ -10,14 +10,14 @@ let neg_words = new Array/*('zord','bosszúság','fáradt','hátrány','lelketle
 'narancsbőr','méltatlan','mumpsz','taknyos','tályog','lefog','szenvedni','lepra','elfajzott','kényszer',
 'éhezik','váladék','heroin','bénít','házsártos','szmog','megvető','lopás','börtön','retteg','fogoly','hálátlan');*/
 ('akció','anakonda','bebaszva','behatol','bosszúálló','cunami','csodálatos','drámai','élénk','emberevés',
-'emberrabló','erotikus','erõszakos','fájdalom','fanatikus','fantasztikus','fantázia','faszfej',
+'emberrabló','erotikus','erőszakos','fájdalom','fanatikus','fantasztikus','fantázia','faszfej',
 'fegyveres','félmeztelen','fenyegetés','fulladás','gengszter','gyanú','gyilkos','gyors','halálos',
 'hasmenés','hazug','hiperaktív','hisztérikus','impulzív','intimitás','izgalom','izgatott','kalandos',
 'kannibál','kárhozat','kéjsóvár','kígyó','kincs','kivégzés','kockázat','közösülés','kurva','lavina',
 'lövés','maszturbál','megbosszul','megcsonkított','megfullad','molesztál','ordít','orgazmus','orgia',
-'orgyilkosság','ördögi','öröm','õrület','õrültség','pánik','pisztoly','pokoli','pornográf','rablás',
-'rettenetes','rohanás','románc','sodródás','sürgõsség','szakítás','szenvedély','szeretkezés','szülés',
-'terror','tombol','tragédia','ünnepel','vágóhíd','vakmerõ','végzet','vérhas','veszélyes','zaklat','zûrzavar');
+'orgyilkosság','ördögi','öröm','őrület','őrültség','pánik','pisztoly','pokoli','pornográf','rablás',
+'rettenetes','rohanás','románc','sodródás','sürgősség','szakítás','szenvedély','szeretkezés','szülés',
+'terror','tombol','tragédia','ünnepel','vágóhíd','vakmerő','végzet','vérhas','veszélyes','zaklat','zűrzavar');
 
 
 let neu_words = new Array/*('megfigyel','rögtön','munkás','vérvonal','példátlan','gyártás','lila',
@@ -28,13 +28,13 @@ let neu_words = new Array/*('megfigyel','rögtön','munkás','vérvonal','péld�
 'menyét','varr','kalapács','látszat','serdülő');*/
 ('abszolút','alacsony','alaphang','alázatos','alkotmány','articsóka','átfogó','borjú','csodáló',
 'csomagtartó','csóvál','deciméter','diagram','divat','egybeesik','elrendezés','eltérít','emu',
-'evezõs','fáradt','felöltõ','fogyasztó','futóegér','füves','gyógyász','harsona','helikopter','hidratál',
-'hónalj','horoszkóp','ín','info','jogi','józanság','kábel','káposzta','kaszinó','kedvesség','képes','keringõ',
+'evezős','fáradt','felöltő','fogyasztó','futóegér','füves','gyógyász','harsona','helikopter','hidratál',
+'hónalj','horoszkóp','ín','info','jogi','józanság','kábel','káposzta','kaszinó','kedvesség','képes','keringő',
 'kiadvány','kibocsátás','kikiáltó','kimonó','kismalac','kisujj','kitalált','kommentár','kortárs','köd','kulcscsont',
-'légúti','lelkész','lépcsõház','letéti','lucerna','magatartás','mágnes','mantra','megerõsít','meghitt','módszeres',
+'légúti','lelkész','lépcsőház','letéti','lucerna','magatartás','mágnes','mantra','megerősít','meghitt','módszeres',
 'mór','nedv','nyolcvan','nyugodt','oszlop','önt','pép','pince','potpuri','pragmatikus','rágás','rágógumi','rokon',
-'röppálya','shilling','székház','széles','szélsõ','szerelõ','szervezet','szobor','szövet','talaj','tárcsa','tartalmaz',
-'taxi','teáskanna','technikus','tekercs','teljesség','teremt','tetõ','tûzhely','tûzõgép','ujjlenyomat','ükapa','vászon',
+'röppálya','shilling','székház','széles','szélső','szerelő','szervezet','szobor','szövet','talaj','tárcsa','tartalmaz',
+'taxi','teáskanna','technikus','tekercs','teljesség','teremt','tető','tűzhely','tűzőgép','ujjlenyomat','ükapa','vászon',
 'világias','visszavon','viteldíj','vizel','vizes','zászlórúd')
 
 
