@@ -416,6 +416,11 @@ const LOC_STRINGS = {
         'CZ': "Prostřední písmeno",
         'HUN': "Középső betű"
     },
+    'g_h_affective_flanker': {
+        'EN': "Middle letter",
+        'CZ': "Prostřední písmeno",
+        'HUN': "Középső betű"
+    },
     'g_h_primeprobe': {
         'EN': "Second word",
         'CZ': "Druhé slovo",
