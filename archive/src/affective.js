@@ -2,14 +2,7 @@ let neg_images = new Array();
 let neu_images = new Array();
 
 // This is a horrible lazy workaround im not proud of:
-let neg_words = new Array/*('zord','bosszúság','fáradt','hátrány','lelketlen','szemét','nyálkás','kapzsiság',
-'túlhajszolt','nehézség','kihalt','börtön','koporsó','hányinger','nyálka',
-'vesztes','reuma','csalódott','halotti','halott','romlás','csavargó','begyulladt','csúnya',
-'szar','lépfene','vérhas','kizár','bosszús','ittas','ijesztő','penész','bűnösség','temetés',
-'nyomorgó','gyáva','piszok','limfóma','sértő','beteg','lopás','koldus','hanyatlás','elhagy',
-'narancsbőr','méltatlan','mumpsz','taknyos','tályog','lefog','szenvedni','lepra','elfajzott','kényszer',
-'éhezik','váladék','heroin','bénít','házsártos','szmog','megvető','lopás','börtön','retteg','fogoly','hálátlan');*/
-('akció','anakonda','bebaszva','behatol','bosszúálló','cunami','csodálatos','drámai','élénk','emberevés',
+let hi_aro_words = new Array('akció','anakonda','bebaszva','behatol','bosszúálló','cunami','csodálatos','drámai','élénk','emberevés',
 'emberrabló','erotikus','erőszakos','fájdalom','fanatikus','fantasztikus','fantázia','faszfej',
 'fegyveres','félmeztelen','fenyegetés','fulladás','gengszter','gyanú','gyilkos','gyors','halálos',
 'hasmenés','hazug','hiperaktív','hisztérikus','impulzív','intimitás','izgalom','izgatott','kalandos',
@@ -19,14 +12,16 @@ let neg_words = new Array/*('zord','bosszúság','fáradt','hátrány','lelketle
 'rettenetes','rohanás','románc','sodródás','sürgősség','szakítás','szenvedély','szeretkezés','szülés',
 'terror','tombol','tragédia','ünnepel','vágóhíd','vakmerő','végzet','vérhas','veszélyes','zaklat','zűrzavar');
 
+let neg_words = new Array('zord','bosszúság','fáradt','hátrány','lelketlen','szemét','nyálkás','kapzsiság',
+'túlhajszolt','nehézség','kihalt','börtön','koporsó','hányinger','nyálka',
+'vesztes','reuma','csalódott','halotti','halott','romlás','csavargó','begyulladt','csúnya',
+'szar','lépfene','vérhas','kizár','bosszús','ittas','ijesztő','penész','bűnösség','temetés',
+'nyomorgó','gyáva','piszok','limfóma','sértő','beteg','lopás','koldus','hanyatlás','elhagy',
+'narancsbőr','méltatlan','mumpsz','taknyos','tályog','lefog','szenvedni','lepra','elfajzott','kényszer',
+'éhezik','váladék','heroin','bénít','házsártos','szmog','megvető','lopás','börtön','retteg','fogoly','hálátlan');
 
-let neu_words = new Array/*('megfigyel','rögtön','munkás','vérvonal','példátlan','gyártás','lila',
-'hátizsák','ugrás','folyadék','kezelő','zarándok','globális','választó','ropogtat','hét',
-'változás','orrszarvú','méhlepény','egyenlet','sáv','töltő','válasz','járda','műértő',
-'liheg','kereplő','hegesztő','lakáj','mikrofon','nevező','fazék','tunkol','agár','verseny',
-'kóla','kanca','főcím','lábszár','bányász','csaj','sor','benyomás','különös','borjú','kaptár',
-'menyét','varr','kalapács','látszat','serdülő');*/
-('abszolút','alacsony','alaphang','alázatos','alkotmány','articsóka','átfogó','borjú','csodáló',
+
+let lo_aro_words = new Array('abszolút','alacsony','alaphang','alázatos','alkotmány','articsóka','átfogó','borjú','csodáló',
 'csomagtartó','csóvál','deciméter','diagram','divat','egybeesik','elrendezés','eltérít','emu',
 'evezős','fáradt','felöltő','fogyasztó','futóegér','füves','gyógyász','harsona','helikopter','hidratál',
 'hónalj','horoszkóp','ín','info','jogi','józanság','kábel','káposzta','kaszinó','kedvesség','képes','keringő',
@@ -36,6 +31,13 @@ let neu_words = new Array/*('megfigyel','rögtön','munkás','vérvonal','péld�
 'röppálya','shilling','székház','széles','szélső','szerelő','szervezet','szobor','szövet','talaj','tárcsa','tartalmaz',
 'taxi','teáskanna','technikus','tekercs','teljesség','teremt','tető','tűzhely','tűzőgép','ujjlenyomat','ükapa','vászon',
 'világias','visszavon','viteldíj','vizel','vizes','zászlórúd')
+
+let neu_words = new Array('megfigyel','rögtön','munkás','vérvonal','példátlan','gyártás','lila',
+'hátizsák','ugrás','folyadék','kezelő','zarándok','globális','választó','ropogtat','hét',
+'változás','orrszarvú','méhlepény','egyenlet','sáv','töltő','válasz','járda','műértő',
+'liheg','kereplő','hegesztő','lakáj','mikrofon','nevező','fazék','tunkol','agár','verseny',
+'kóla','kanca','főcím','lábszár','bányász','csaj','sor','benyomás','különös','borjú','kaptár',
+'menyét','varr','kalapács','látszat','serdülő');
 
 
 
@@ -71,6 +73,11 @@ neu_words.push.apply(neu_words,neu_words)
 shuffle(neg_words)
 neg_words.push.apply(neg_words,neg_words)
 console.log(neg_words)
+shuffle(lo_aro_words)
+neu_words.push.apply(lo_aro_words,lo_aro_words)
+shuffle(hi_aro_words)
+neg_words.push.apply(hi_aro_words,hi_aro_words)
+console.log(hi_aro_words)
 
 if (X.type === "affective_primeprobe"){
   for (i = 1; i<=18; i++) {

@@ -171,7 +171,7 @@ function endPractice() {
     if (X.type === "affective_primeprobe"){
       showDiv('AffectiveEndPractice');
     }
-    else if (X.type === "affective_words_primeprobe" || X.type === "affective_words_primeprobe_posneg") {
+    else if (X.type === "affective_words_primeprobe" || X.type === "affective_words_primeprobe_posneg" || X.type === "affective_flanker" || X.type === "affective_flanker_arousal") {
       showDiv('AffectiveWordsEndPractice');
     }else{
       showDiv('EndPractice');

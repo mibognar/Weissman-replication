@@ -341,7 +341,7 @@ const CFG = {
         if(X.debug)
             X.responseTimeout = setTimeout(saveResponse, X.cfg.maxRT);
 
-        setTimeout(CFG.flanker.hideStimulus, CFG.flanker.stimDuration, stimDiv);
+        setTimeout(CFG.affective_flanker.hideStimulus, CFG.affective_flanker.stimDuration, stimDiv);
       },
       hideStimulus: function(stimDiv) {
           stimDiv.style.color = "white";
@@ -395,6 +395,163 @@ const CFG = {
 
       onResponse: sharedCFG.onResponse
     },
+    affective_flanker_arousal: {
+        blocks: sharedCFG.blocks,
+        trialsPerBlock: sharedCFG.trialsPerBlock,
+        trainingTrials: sharedCFG.trainingTrials,
+        interTrialInterval: sharedCFG.interTrialInterval,
+        trainingInterTrialInterval: sharedCFG.trainingInterTrialInterval,
+        maxRT: sharedCFG.maxRT,
+        stimuli: [],
+        responseKeys: [],
+        stimDuration: 250,
+        imageDuration: 1967,
+        blankDuration: 1967,
+        neg_word_num: 0,
+        neu_word_num: 0,
+        getResponseMap: function() {
+            if(CFG.flanker.stimuli.length === 0)
+                CFG.flanker.stimuli = ['g_s_M', 'g_s_S', 'g_s_T', 'g_s_H'];
+            if(CFG.flanker.responseKeys.length === 0)
+                CFG.flanker.responseKeys = ['m', 'n', 'x', 'c'];
+
+            // Flanker task uses randomised stimulus pairings
+            let stim = shuffle(CFG.flanker.stimuli);
+            // Stimulus-response bindings are also randomised
+            let response = shuffle(CFG.flanker.responseKeys);
+            let out = {};
+            for(let i = 0; i < stim.length; i++)
+                out[stim[i]] = response[i];
+            return out;
+        },
+        getTrials: function() {
+            let set = [
+                [CFG.flanker.stimuli[0], CFG.flanker.stimuli[1]],
+                [CFG.flanker.stimuli[2], CFG.flanker.stimuli[3]]
+            ];
+            let trials = [];
+            // Trial types is a list of flags from 0-15:
+            // flag = (8*prevCongruency)+(4*curCongruency)+(2*featureSet)+(stimulus)
+            for(let b = 0; b < CFG.flanker.blocks; b++) {
+                let isPractice = b === 0? 1 : 0;
+                let trialTypes = sharedCFG.getCongruencySequence(
+                    isPractice? CFG.flanker.trainingTrials : CFG.flanker.trialsPerBlock, b > 0
+                );
+                trialTypes.forEach((t) => {
+                    let trial = {
+                        trialId: trials.length,
+                        typeCode: t,
+                        block: b,
+                        isPractice,
+                        responseTarget: K(X.responseMap[set[(t & 2) === 2? 1 : 0][t & 1]]),
+                        isCongruent: (t & 4) === 4? 1 : 0,
+                        stimOnset: null,
+                        is_affective_word: 0,
+                        is_blank: 0,
+                        is_flanker: 0,
+                        word_id: null,
+                        word_content: null,
+                        stimOffset: null,
+                        responseTime: null,
+                        responseContent: null
+                    };
+                    let target = set[(t & 2) === 2? 1 : 0][t & 1];
+                    let flank = S(trial.isCongruent? target : set[(t & 2) === 2? 1 : 0][1-(t & 1)]);
+                    trial.stimulus = flank.repeat(3) + S(target) + flank.repeat(3);
+                    trials.push(trial);
+                });
+            }
+
+            return trials;
+        },
+        showStimulus: function(stimDiv) {
+          let previous_trialNum = X.trialNum-1
+          if (X.trialNum > 0 && X.trials[previous_trialNum]["is_flanker"] && !X.trials[X.trialNum].isPractice){ //&& !X.trials[X.trialNum].isPractice){
+            X.trials[X.trialNum]["is_blank"] = 1;
+            CFG.affective_flanker_arousal.showBlank(stimDiv);
+          }
+          else if (X.trialNum % 3 == 0 && !X.trials[X.trialNum].isPractice){
+            X.trials[X.trialNum]["is_affective_word"] = 1;
+            CFG.affective_flanker_arousal.showWord(stimDiv);
+          }
+          else {
+            X.trials[X.trialNum]["is_flanker"] = 1;
+            CFG.affective_flanker_arousal.showFlanker(stimDiv);
+          }
+          console.log(X.trials[X.trialNum]["is_blank"]);
+
+          /*else if (X.trialNum % 3 == 0 && !X.trials[X.trialNum].isPractice){
+            X.trials[X.trialNum]["is_affective_word"] = 1;
+            CFG.affective_words_primeprobe.showWord(stimDiv);
+          }else{
+            CFG.affective_words_primeprobe.showPrime(stimDiv);
+            X.trials[X.trialNum]["is_primeprobe"] = 1;
+          }*/
+      },
+      showFlanker: function(stimDiv){
+        stimDiv.style.color = "white";
+        stimDiv.classList.add('flanker');
+        stimDiv.innerText = X.trials[X.trialNum].stimulus;
+        X.trials[X.trialNum].stimOnset = now();
+        X.responseOpen = true;
+        if(X.debug)
+            X.responseTimeout = setTimeout(saveResponse, X.cfg.maxRT);
+
+        setTimeout(CFG.affective_flanker_arousal.hideStimulus, CFG.affective_flanker_arousal.stimDuration, stimDiv);
+      },
+      hideStimulus: function(stimDiv) {
+          stimDiv.style.color = "white";
+          stimDiv.classList.remove("flanker");
+          stimDiv.classList.add("feedback");
+          stimDiv.innerHTML = "<span class='fixation'>+</span>";
+          if(X.trials[X.trialNum].isPractice)
+              stimDiv.innerHTML += responseMapToHTML(X.responseMap, false);
+
+          if(X.trialNum < X.trials.length)
+              X.trials[X.trialNum].stimOffset = now();
+      },
+      hideWord: function(stimDiv){
+        stimDiv.style.color = "white";
+        stimDiv.innerText = "";
+        //stimDiv.removeChild(theimage);
+      //  if(X.trialNum < X.trials.length)
+        //    X.trials[X.trialNum].stimOffset = now();
+      },
+      showBlank: function(stimDiv) {
+        stimDiv.style.color = "white";
+        stimDiv.innerHTML = "";
+        X.responseOpen = true;
+        // Responding is open for as long as necessary, except in debug mode
+        X.responseTimeout = setTimeout(saveResponse, X.cfg.maxRT);
+        setTimeout(CFG.affective_flanker_arousal.hideWord,CFG.affective_flanker_arousal.blankDuration, stimDiv);
+      },
+      showWord: function(stimDiv){
+        if (X.trials[X.trialNum]["isCongruent"]===1){
+          var theword = lo_aro_words[CFG.affective_flanker_arousal.neu_word_num];
+          CFG.affective_flanker_arousal.neu_word_num += 1;
+          X.trials[X.trialNum]["word_id"] = "neu" + CFG.affective_flanker_arousal.neu_word_num;
+          X.trials[X.trialNum]["word_content"] = theword;
+          console.log("neutral: "+ theword);
+        }else{
+          var theword = hi_aro_words[CFG.affective_flanker_arousal.neg_word_num];
+          CFG.affective_flanker_arousal.neg_word_num += 1;
+          X.trials[X.trialNum]["word_id"] = "neg" + CFG.affective_flanker_arousal.neg_word_num;
+          X.trials[X.trialNum]["word_content"] = theword;
+          console.log("negative: "+ theword);
+        }
+        // stimDiv.appendChild(theimage);
+        stimDiv.style.color = "#00FFFF";
+        stimDiv.innerHTML = "<p style='text-align: center'>"+theword+"</p>";
+        X.responseOpen = true;
+        // Responding is open for as long as necessary, except in debug mode
+        X.responseTimeout = setTimeout(saveResponse, X.cfg.maxRT);
+        setTimeout(CFG.affective_flanker_arousal.hideWord,CFG.affective_flanker_arousal.imageDuration, stimDiv);
+
+      },
+
+      onResponse: sharedCFG.onResponse
+    },
+
 
     affective_primeprobe: {
       blocks: sharedCFG.blocks,
