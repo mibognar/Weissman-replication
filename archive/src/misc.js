@@ -104,7 +104,7 @@ function responseMapToHTML(m, fingerMap = true) {
         let rows = [];
         for(let x of map)
             rows.push(x[1] + " = " + x[2]);
-        out = "<p class='response-map'>" + rows.join("; ") + "</p>";
+        out = "<p class='response-map' style='text-align: center'>" + rows.join("; ") + "</p>";
     }
 
     return out;
