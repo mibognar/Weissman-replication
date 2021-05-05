@@ -479,7 +479,7 @@ const LOC_STRINGS = {
     'g_p_aff_words_end': {
         'EN': "End of practice",
         'CZ': "Konec zácviku",
-        'HUN': "Véget ért a gyakorló rész. A következő blokkokban esetenként kék betűszínű szavak is megjelennek a képernyőn, ezeknél nem kell megnyomnod semmit, csak figyelmesen olvasd el őket!"
+        'HUN': "Véget ért a gyakorló rész. A következő blokkokban esetenként kék betűszínű szavak is megjelennek a képernyőn, ezeknél nem kell megnyomnod semmit, csak figyelmesen olvasd el őket! Az ingerbemutatás lelassul, csak a fehér betűsorokra kell választ adnod a megfelelő gomb lenyomásával."
     },
     'g_r_too_slow': {
         'EN': "too slow",
