@@ -261,8 +261,13 @@ function exportData() {
         if (this.readyState === 4) {
             if(this.status === 200 && JSON.parse(this.responseText).code === 200) {
                 // On success, notify the user
-                document.querySelector('#SaveStatus').innerHTML =
-                    "<p>" + S('g_g_data_save_ok') + "</p>";
+                if(X.type === "affective_flanker_arousal"){
+                  document.querySelector('#SaveStatus').innerHTML =
+                      "<p>" + S('g_g_data_save_ok_flanker_arousal') + "</p>";
+                }else{
+                  document.querySelector('#SaveStatus').innerHTML =
+                      "<p>" + S('g_g_data_save_ok') + "</p>";
+                }
             } else {
                 // On failure, notify the user
                 let err = JSON.parse(this.responseText).error;
